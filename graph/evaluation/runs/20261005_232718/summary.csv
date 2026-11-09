@@ -1,0 +1,5 @@
+Question Type,Count,Extraction Match %,Intent Raw %,Intent Aliased %,Routing Acc %,Retrieval Field Recall %,Answer Correctness %,Pass Rate %
+defect_lookup,3,100.0%,66.7%,100.0%,100.0%,100.0%,100.0%,100.0%
+defect_multi_property,3,100.0%,100.0%,100.0%,100.0%,100.0%,100.0%,100.0%
+defect_to_testcase,3,100.0%,0.0%,66.7%,100.0%,50.0%,33.3%,0.0%
+testcase_to_defects,2,100.0%,50.0%,50.0%,50.0%,75.0%,50.0%,0.0%

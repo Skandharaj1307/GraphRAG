@@ -1,0 +1,4 @@
+Expected Route,Count,Routing Acc %,Retrieval Field Recall %,Answer Correctness %
+hybrid,1,0.0%,0.0%,0.0%
+lightrag,2,0.0%,0.0%,50.0%
+neo4j,18,100.0%,83.3%,68.1%

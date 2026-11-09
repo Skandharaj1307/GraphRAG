@@ -1,0 +1,169 @@
+{"id": "G2-0002", "query_type": "adversarial", "judge_model": "llama3.1:8b", "faithfulness": 0.5, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "contradiction"}
+{"id": "G2-0003", "query_type": "semantic", "judge_model": "llama3.1:8b", "faithfulness": 0.6666666666666666, "context_truncated": false, "correctness": 0.5, "completeness": 0.5, "j_reason": "extra correct detail"}
+{"id": "G2-0004", "query_type": "execution_context", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0007", "query_type": "unstructured_logs", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.5, "completeness": 0.5, "j_reason": "extra details"}
+{"id": "G2-0008", "query_type": "id_lookup", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0011", "query_type": "unstructured_logs", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.8, "completeness": 0.6, "j_reason": "extra details"}
+{"id": "G2-0012", "query_type": "requirements", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 0.5, "j_reason": "extra correct detail"}
+{"id": "G2-0013", "query_type": "testcase_to_defects", "judge_model": "llama3.1:8b", "faithfulness": 0.0, "context_truncated": true, "correctness": 0.0, "completeness": 0.0, "j_reason": "no mention of TC-000358 or its defects"}
+{"id": "G2-0015", "query_type": "unanswerable", "judge_model": "llama3.1:8b", "j_abstained": true, "j_invented": false, "j_reason": "short"}
+{"id": "G2-0017", "query_type": "requirements", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "incomplete and incorrect"}
+{"id": "G2-0018", "query_type": "id_lookup", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "answer contains unrelated information"}
+{"id": "G2-0019", "query_type": "defect_to_testcase", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 0.8, "j_reason": "extra details"}
+{"id": "G2-0021", "query_type": "unstructured_logs", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0022", "query_type": "unanswerable", "judge_model": "llama3.1:8b", "j_abstained": true, "j_invented": false, "j_reason": "short"}
+{"id": "G2-0024", "query_type": "unanswerable", "judge_model": "llama3.1:8b", "j_abstained": true, "j_invented": false, "j_reason": "short"}
+{"id": "G2-0025", "query_type": "defect_to_testcase", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 0.75, "j_reason": "extra details"}
+{"id": "G2-0026", "query_type": "multi_condition_filter", "judge_model": "llama3.1:8b", "faithfulness": 0.5, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0028", "query_type": "semantic", "judge_model": "llama3.1:8b", "faithfulness": 0.25, "context_truncated": false, "correctness": 1.0, "completeness": 0.5, "j_reason": "extra correct detail"}
+{"id": "G2-0029", "query_type": "requirements", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact match"}
+{"id": "G2-0032", "query_type": "adversarial", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": true, "correctness": 0.0, "completeness": 0.0, "j_reason": "irrelevant"}
+{"id": "G2-0033", "query_type": "id_lookup", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 0.5, "j_reason": "missing detail"}
+{"id": "G2-0035", "query_type": "multi_condition_filter", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "short"}
+{"id": "G2-0036", "query_type": "semantic", "judge_model": "llama3.1:8b", "faithfulness": 0.5, "context_truncated": false, "correctness": 1.0, "completeness": 0.5, "j_reason": "extra correct detail"}
+{"id": "G2-0037", "query_type": "multi_condition_filter", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "incomplete and incorrect details"}
+{"id": "G2-0038", "query_type": "id_lookup", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.75, "completeness": 0.75, "j_reason": "extra correct detail"}
+{"id": "G2-0040", "query_type": "requirements", "judge_model": "llama3.1:8b", "faithfulness": 0.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "incomplete and incorrect"}
+{"id": "G2-0041", "query_type": "id_lookup", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.5, "completeness": 0.5, "j_reason": "extra correct detail"}
+{"id": "G2-0043", "query_type": "unstructured_logs", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0044", "query_type": "semantic", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "none of the provided answers match the gold facts"}
+{"id": "G2-0045", "query_type": "unstructured_logs", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "irrelevant"}
+{"id": "G2-0049", "query_type": "multi_condition_filter", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "short"}
+{"id": "G2-0053", "query_type": "semantic", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "contradiction in root cause and module"}
+{"id": "G2-0056", "query_type": "unanswerable", "judge_model": "llama3.1:8b", "j_abstained": true, "j_invented": false, "j_reason": "short"}
+{"id": "G2-0059", "query_type": "execution_context", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.75, "completeness": 0.75, "j_reason": "extra correct detail"}
+{"id": "G2-0060", "query_type": "defect_to_testcase", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.5, "completeness": 0.25, "j_reason": "incomplete"}
+{"id": "G2-0061", "query_type": "id_lookup", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0063", "query_type": "semantic", "judge_model": "llama3.1:8b", "faithfulness": 0.2, "context_truncated": false, "correctness": 1.0, "completeness": 0.5, "j_reason": "extra correct detail"}
+{"id": "G2-0064", "query_type": "semantic", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact match"}
+{"id": "G2-0066", "query_type": "id_lookup", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 0.5, "j_reason": "missing detail"}
+{"id": "G2-0067", "query_type": "semantic", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "short"}
+{"id": "G2-0068", "query_type": "requirements", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact match"}
+{"id": "G2-0069", "query_type": "id_lookup", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0070", "query_type": "unanswerable", "judge_model": "llama3.1:8b", "j_abstained": true, "j_invented": false, "j_reason": "short"}
+{"id": "G2-0072", "query_type": "defect_to_testcase", "judge_model": "llama3.1:8b", "faithfulness": 0.75, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0074", "query_type": "testcase_to_defects", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": true, "correctness": 0.0, "completeness": 0.0, "j_reason": "irrelevant"}
+{"id": "G2-0075", "query_type": "semantic", "judge_model": "llama3.1:8b", "faithfulness": 0.75, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "short"}
+{"id": "G2-0077", "query_type": "requirements", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0078", "query_type": "unstructured_logs", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.5, "completeness": 0.5, "j_reason": "missing detail"}
+{"id": "G2-0079", "query_type": "id_lookup", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0080", "query_type": "id_lookup", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0082", "query_type": "requirements", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact match"}
+{"id": "G2-0087", "query_type": "execution_context", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.75, "completeness": 0.75, "j_reason": "extra correct detail"}
+{"id": "G2-0089", "query_type": "unanswerable", "judge_model": "llama3.1:8b", "j_abstained": true, "j_invented": false, "j_reason": "short"}
+{"id": "G2-0091", "query_type": "unstructured_logs", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.8, "completeness": 0.6, "j_reason": "extra detail"}
+{"id": "G2-0092", "query_type": "multi_condition_filter", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.5, "completeness": 0.2, "j_reason": "partial"}
+{"id": "G2-0094", "query_type": "execution_context", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.75, "completeness": 0.5, "j_reason": "missing details"}
+{"id": "G2-0099", "query_type": "adversarial", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact match"}
+{"id": "G2-0102", "query_type": "semantic", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.5, "completeness": 0.5, "j_reason": "extra correct detail"}
+{"id": "G2-0103", "query_type": "requirements", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 0.5, "j_reason": "incomplete"}
+{"id": "G2-0104", "query_type": "multi_condition_filter", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "short"}
+{"id": "G2-0105", "query_type": "id_lookup", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0107", "query_type": "execution_context", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": true, "correctness": 0.0, "completeness": 0.0, "j_reason": "no matching facts"}
+{"id": "G2-0108", "query_type": "multi_condition_filter", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.5, "completeness": 0.25, "j_reason": "partial"}
+{"id": "G2-0109", "query_type": "execution_context", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.75, "completeness": 0.75, "j_reason": "extra correct detail"}
+{"id": "G2-0111", "query_type": "unanswerable", "judge_model": "llama3.1:8b", "j_abstained": true, "j_invented": false, "j_reason": "short"}
+{"id": "G2-0112", "query_type": "requirements", "judge_model": "llama3.1:8b", "faithfulness": null, "context_truncated": false, "correctness": 1.0, "completeness": 0.5, "j_reason": "extra correct detail"}
+{"id": "G2-0114", "query_type": "semantic", "judge_model": "llama3.1:8b", "faithfulness": 0.0, "context_truncated": false, "correctness": 1.0, "completeness": 0.5, "j_reason": "extra correct detail"}
+{"id": "G2-0117", "query_type": "id_lookup", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0118", "query_type": "unstructured_logs", "judge_model": "llama3.1:8b", "faithfulness": 0.5833333333333334, "context_truncated": false, "correctness": 0.8, "completeness": 0.6, "j_reason": "extra details"}
+{"id": "G2-0119", "query_type": "testcase_to_defects", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0120", "query_type": "execution_context", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0121", "query_type": "defect_to_testcase", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.8, "completeness": 0.6, "j_reason": "extra correct detail"}
+{"id": "G2-0122", "query_type": "semantic", "judge_model": "llama3.1:8b", "faithfulness": 0.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0123", "query_type": "execution_context", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0124", "query_type": "requirements", "judge_model": "llama3.1:8b", "faithfulness": 0.3333333333333333, "context_truncated": false, "correctness": 1.0, "completeness": 0.0, "j_reason": "incomplete"}
+{"id": "G2-0126", "query_type": "testcase_to_defects", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0127", "query_type": "multi_condition_filter", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0130", "query_type": "multi_condition_filter", "judge_model": "llama3.1:8b", "faithfulness": null, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0132", "query_type": "defect_to_testcase", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 0.8, "j_reason": "extra details"}
+{"id": "G2-0133", "query_type": "multi_condition_filter", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 0.9, "j_reason": "extra correct detail"}
+{"id": "G2-0134", "query_type": "testcase_to_defects", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact match"}
+{"id": "G2-0137", "query_type": "semantic", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.5, "completeness": 0.5, "j_reason": "extra correct detail"}
+{"id": "G2-0138", "query_type": "multi_condition_filter", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "short"}
+{"id": "G2-0140", "query_type": "execution_context", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": true, "correctness": 0.0, "completeness": 0.0, "j_reason": "irrelevant"}
+{"id": "G2-0142", "query_type": "semantic", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "wrong entity and module"}
+{"id": "G2-0144", "query_type": "semantic", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact match"}
+{"id": "G2-0145", "query_type": "requirements", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "incomplete and incorrect"}
+{"id": "G2-0147", "query_type": "unanswerable", "judge_model": "llama3.1:8b", "j_abstained": true, "j_invented": false, "j_reason": "short"}
+{"id": "G2-0148", "query_type": "testcase_to_defects", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact match"}
+{"id": "G2-0149", "query_type": "unstructured_logs", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0151", "query_type": "unanswerable", "judge_model": "llama3.1:8b", "j_abstained": true, "j_invented": false, "j_reason": "short"}
+{"id": "G2-0152", "query_type": "requirements", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0153", "query_type": "testcase_to_defects", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact match"}
+{"id": "G2-0155", "query_type": "testcase_to_defects", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact match"}
+{"id": "G2-0156", "query_type": "requirements", "judge_model": "llama3.1:8b", "faithfulness": null, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "missing detail"}
+{"id": "G2-0157", "query_type": "requirements", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 0.5, "j_reason": "extra correct detail"}
+{"id": "G2-0159", "query_type": "unanswerable", "judge_model": "llama3.1:8b", "j_abstained": true, "j_invented": false, "j_reason": "short"}
+{"id": "G2-0160", "query_type": "execution_context", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0161", "query_type": "execution_context", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 0.75, "j_reason": "extra correct detail"}
+{"id": "G2-0162", "query_type": "multi_condition_filter", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "short"}
+{"id": "G2-0163", "query_type": "multi_condition_filter", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "short"}
+{"id": "G2-0165", "query_type": "unstructured_logs", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.5, "completeness": 0.75, "j_reason": "extra detail"}
+{"id": "G2-0166", "query_type": "requirements", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 0.0, "j_reason": "incomplete"}
+{"id": "G2-0167", "query_type": "testcase_to_defects", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact match"}
+{"id": "G2-0168", "query_type": "unstructured_logs", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.5, "completeness": 0.5, "j_reason": "missing extra details"}
+{"id": "G2-0169", "query_type": "execution_context", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.75, "completeness": 0.5, "j_reason": "missing details"}
+{"id": "G2-0171", "query_type": "adversarial", "judge_model": "llama3.1:8b", "faithfulness": 0.5, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "inaccurate"}
+{"id": "G2-0172", "query_type": "id_lookup", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 0.5, "j_reason": "missing detail"}
+{"id": "G2-0173", "query_type": "id_lookup", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0174", "query_type": "execution_context", "judge_model": "llama3.1:8b", "faithfulness": 0.6666666666666666, "context_truncated": false, "correctness": 0.75, "completeness": 0.5, "j_reason": "missing details"}
+{"id": "G2-0175", "query_type": "multi_condition_filter", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "incorrect total count and missing matching bug IDs"}
+{"id": "G2-0177", "query_type": "semantic", "judge_model": "llama3.1:8b", "faithfulness": 0.6, "context_truncated": false, "correctness": 0.8, "completeness": 0.4, "j_reason": "extra correct detail"}
+{"id": "G2-0178", "query_type": "unanswerable", "judge_model": "llama3.1:8b", "j_abstained": true, "j_invented": false, "j_reason": "short"}
+{"id": "G2-0179", "query_type": "requirements", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "contradiction"}
+{"id": "G2-0180", "query_type": "requirements", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0181", "query_type": "multi_condition_filter", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0185", "query_type": "execution_context", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0187", "query_type": "requirements", "judge_model": "llama3.1:8b", "faithfulness": 0.5, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0188", "query_type": "unstructured_logs", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0189", "query_type": "adversarial", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact match"}
+{"id": "G2-0192", "query_type": "id_lookup", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0194", "query_type": "unstructured_logs", "judge_model": "llama3.1:8b", "faithfulness": 0.6666666666666666, "context_truncated": false, "correctness": 0.8, "completeness": 0.6, "j_reason": "extra detail"}
+{"id": "G2-0196", "query_type": "execution_context", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.75, "completeness": 0.75, "j_reason": "extra correct detail"}
+{"id": "G2-0197", "query_type": "id_lookup", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "answer contains unrelated information"}
+{"id": "G2-0202", "query_type": "defect_to_testcase", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.5, "completeness": 0.75, "j_reason": "extra correct detail"}
+{"id": "G2-0203", "query_type": "multi_condition_filter", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0204", "query_type": "testcase_to_defects", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0205", "query_type": "execution_context", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 0.75, "j_reason": "extra correct detail"}
+{"id": "G2-0207", "query_type": "id_lookup", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0210", "query_type": "unstructured_logs", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 0.5, "j_reason": "extra correct detail"}
+{"id": "G2-0211", "query_type": "semantic", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.5, "completeness": 0.5, "j_reason": "extra correct detail"}
+{"id": "G2-0213", "query_type": "unanswerable", "judge_model": "llama3.1:8b", "j_abstained": true, "j_invented": false, "j_reason": "short"}
+{"id": "G2-0214", "query_type": "multi_condition_filter", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "short"}
+{"id": "G2-0215", "query_type": "id_lookup", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0216", "query_type": "requirements", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "incomplete and incorrect"}
+{"id": "G2-0217", "query_type": "unanswerable", "judge_model": "llama3.1:8b", "j_abstained": true, "j_invented": false, "j_reason": "short"}
+{"id": "G2-0218", "query_type": "defect_to_testcase", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.5, "completeness": 0.25, "j_reason": "incomplete"}
+{"id": "G2-0220", "query_type": "adversarial", "judge_model": "llama3.1:8b", "faithfulness": null, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0223", "query_type": "multi_condition_filter", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "short"}
+{"id": "G2-0226", "query_type": "multi_condition_filter", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0227", "query_type": "requirements", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "incomplete and incorrect"}
+{"id": "G2-0228", "query_type": "unstructured_logs", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.5, "completeness": 0.5, "j_reason": "missing detail"}
+{"id": "G2-0229", "query_type": "unstructured_logs", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.5, "completeness": 0.25, "j_reason": "extra details"}
+{"id": "G2-0230", "query_type": "unstructured_logs", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0234", "query_type": "semantic", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.5, "completeness": 0.5, "j_reason": "extra correct detail"}
+{"id": "G2-0238", "query_type": "semantic", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "contradiction in root cause and extra incorrect detail"}
+{"id": "G2-0239", "query_type": "unstructured_logs", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.5, "completeness": 0.5, "j_reason": "extra correct detail"}
+{"id": "G2-0240", "query_type": "unanswerable", "judge_model": "llama3.1:8b", "j_abstained": true, "j_invented": false, "j_reason": "short"}
+{"id": "G2-0242", "query_type": "defect_to_testcase", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.5, "completeness": 0.25, "j_reason": "missing details"}
+{"id": "G2-0244", "query_type": "execution_context", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.75, "completeness": 0.5, "j_reason": "missing test case ID"}
+{"id": "G2-0245", "query_type": "multi_condition_filter", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "short"}
+{"id": "G2-0246", "query_type": "execution_context", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0247", "query_type": "execution_context", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0248", "query_type": "requirements", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "missing requirement ID"}
+{"id": "G2-0249", "query_type": "defect_to_testcase", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.5, "completeness": 0.25, "j_reason": "incomplete and incorrect details"}
+{"id": "G2-0251", "query_type": "adversarial", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 0.5, "j_reason": "missing framework"}
+{"id": "G2-0252", "query_type": "semantic", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "short"}
+{"id": "G2-0255", "query_type": "id_lookup", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0257", "query_type": "multi_condition_filter", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "short"}
+{"id": "G2-0258", "query_type": "semantic", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact match"}
+{"id": "G2-0259", "query_type": "unstructured_logs", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 0.5, "j_reason": "missing extra correct detail"}
+{"id": "G2-0260", "query_type": "execution_context", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.75, "completeness": 0.5, "j_reason": "missing details"}
+{"id": "G2-0261", "query_type": "defect_to_testcase", "judge_model": "llama3.1:8b", "faithfulness": 0.5, "context_truncated": false, "correctness": 0.5, "completeness": 0.25, "j_reason": "missing details"}
+{"id": "G2-0262", "query_type": "testcase_to_defects", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 1.0, "j_reason": "exact"}
+{"id": "G2-0264", "query_type": "execution_context", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 1.0, "completeness": 0.75, "j_reason": "extra correct detail"}
+{"id": "G2-0265", "query_type": "unstructured_logs", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.0, "completeness": 0.0, "j_reason": "irrelevant"}
+{"id": "G2-0266", "query_type": "unstructured_logs", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.5, "completeness": 0.75, "j_reason": "extra detail"}
+{"id": "G2-0267", "query_type": "id_lookup", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.75, "completeness": 0.75, "j_reason": "extra correct detail"}
+{"id": "G2-0270", "query_type": "id_lookup", "judge_model": "llama3.1:8b", "faithfulness": 1.0, "context_truncated": false, "correctness": 0.8, "completeness": 0.8, "j_reason": "extra correct detail"}

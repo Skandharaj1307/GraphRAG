@@ -88,6 +88,7 @@ IMPORTANT RULES:
 
 8. ANSWER STYLE
    - Answer directly.
+   - Do not output any thinking process, greeting, or preamble. Begin directly with the factual answer.
    - Use bullet points or short sections when useful.
    - Include relevant IDs exactly as provided.
    - Keep explanations concise but sufficiently detailed.
@@ -104,11 +105,42 @@ IMPORTANT RULES:
       external source.
     - Your job is only to reason over the supplied context
       and produce the final grounded answer.
+
+11. TOTALS AND SAMPLING
+    - When 'filter_results' or 'aggregates' specify a 'total', state the true total count accurately.
+    - If total > length of sample rows, clearly state that the listed rows represent a sample of N items out of the true total.
+
+12. MISSING LINKS AND NOT FOUND IDS
+    - If 'notes.not_found_ids' is non-empty, explicitly inform the user that those IDs were not found in the database.
+    - If 'notes.links_missing' is true, state plainly that associated execution or defect links are missing for the item.
+
+13. UNMAPPED FILTERS
+    - If 'notes.unmapped_filters' is non-empty, clearly state that the requested filter value (e.g. an unknown environment or module) does not exist in the database.
+
+14. STRICT GROUNDING & NO EMBEDDINGS
+    - Answer only from the provided evidence and otherwise state that the information is not in the data.
+    - Never reference raw embedding vectors.
+
+15. NO THINKING PROCESS OR PREAMBLE
+    - Do not output any thinking process, greeting, or preamble. Begin directly with the factual answer.
 """.strip()
 
     # ========================================================
     # BUILD USER PROMPT
     # ========================================================
+
+    @staticmethod
+    def _strip_embeddings(obj: Any) -> Any:
+        """Ensure no embeddings or embedding models leak to the final LLM prompt."""
+        if isinstance(obj, dict):
+            return {
+                k: GroundedPromptBuilder._strip_embeddings(v)
+                for k, v in obj.items()
+                if k not in ("embedding", "embedding_model", "vector")
+            }
+        if isinstance(obj, list):
+            return [GroundedPromptBuilder._strip_embeddings(x) for x in obj]
+        return obj
 
     def build_user_prompt(
         self,
@@ -122,11 +154,13 @@ IMPORTANT RULES:
         """
 
         # ----------------------------------------------------
-        # Serialize context safely
+        # Serialize sanitized context safely
         # ----------------------------------------------------
 
+        clean_context = self._strip_embeddings(context)
+
         context_json = json.dumps(
-            context,
+            clean_context,
             indent=2,
             ensure_ascii=False,
             default=str
@@ -157,13 +191,18 @@ IMPORTANT RULES:
             "- Use the Neo4j graph relationships as authoritative "
             "for structured relationships.\n"
             "- Use LightRAG evidence as supporting semantic evidence.\n"
+            "- If notes specify total > sample, state the total count and note the sample size.\n"
+            "- If notes specify not_found_ids, state clearly that those IDs do not exist.\n"
+            "- If notes specify links_missing, state clearly that links are missing.\n"
+            "- If notes specify unmapped_filters, state clearly that those filter values do not exist in the data.\n"
             "- Treat screenshot metadata according to the consistency "
             "information provided in the context.\n"
             "- Do not invent information that is absent from the context.\n"
             "- If evidence is insufficient, say so.\n"
             "- If an evidence conflict materially affects the answer, "
             "mention it briefly.\n"
-            "- Give the user a direct, clear answer."
+            "- Give the user a direct, clear answer.\n"
+            "- Do not output any thinking process, greeting, or preamble. Begin directly with the factual answer."
         )
 
         return prompt

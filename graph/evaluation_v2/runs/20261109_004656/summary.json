@@ -1,0 +1,57 @@
+{
+  "run_timestamp": "20261109_004656",
+  "mode": "retrieval_only",
+  "total_cases": 42,
+  "valid_cases": 42,
+  "infra_errors": 0,
+  "pipeline_errors": 0,
+  "latency_p50": 0.028,
+  "latency_p95": 0.092,
+  "overall_metrics": {
+    "agg_filters_match": 1.0,
+    "agg_order_match": 1.0,
+    "agg_pairs_match": 1.0,
+    "aggregation_exact": 1.0,
+    "context_chars": 20999.0238,
+    "context_tokens_est": 5249.4048,
+    "field_recall": 1.0,
+    "node_precision": 0.6522,
+    "node_recall": 1.0
+  },
+  "by_type": {
+    "aggregation": {
+      "count": 21,
+      "agg_filters_match": 1.0,
+      "agg_order_match": 1.0,
+      "agg_pairs_match": 1.0,
+      "aggregation_exact": 1.0,
+      "context_chars": 15851.9524,
+      "context_tokens_est": 3962.6667,
+      "field_recall": 1.0,
+      "node_precision": 1.0,
+      "node_recall": 1.0
+    },
+    "multi_condition_filter": {
+      "count": 21,
+      "context_chars": 26146.0952,
+      "context_tokens_est": 6536.1429,
+      "field_recall": 1.0,
+      "node_precision": 0.3044,
+      "node_recall": 1.0
+    }
+  },
+  "by_split": {
+    "dev": {
+      "count": 42,
+      "agg_filters_match": 1.0,
+      "agg_order_match": 1.0,
+      "agg_pairs_match": 1.0,
+      "aggregation_exact": 1.0,
+      "context_chars": 20999.0238,
+      "context_tokens_est": 5249.4048,
+      "field_recall": 1.0,
+      "node_precision": 0.6522,
+      "node_recall": 1.0
+    }
+  }
+}

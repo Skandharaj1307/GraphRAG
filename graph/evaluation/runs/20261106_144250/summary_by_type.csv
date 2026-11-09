@@ -1,0 +1,9 @@
+Question Type,Count,Extraction Match %,Intent Raw %,Intent Aliased %,Routing Acc %,Retrieval Field Recall %,Answer Correctness %,Pass Rate %
+broad_summary,1,100.0%,0.0%,0.0%,0.0%,0.0%,0.0%,0.0%
+defect_lookup,3,100.0%,100.0%,100.0%,100.0%,100.0%,66.7%,66.7%
+defect_multi_property,3,100.0%,100.0%,100.0%,100.0%,100.0%,100.0%,100.0%
+defect_to_testcase,3,100.0%,100.0%,100.0%,100.0%,100.0%,100.0%,100.0%
+execution_context,3,100.0%,100.0%,100.0%,100.0%,100.0%,75.0%,0.0%
+screenshot_lookup,2,100.0%,100.0%,100.0%,100.0%,100.0%,50.0%,50.0%
+testcase_executions_summary,2,100.0%,50.0%,50.0%,100.0%,100.0%,100.0%,50.0%
+testcase_to_defects,2,100.0%,50.0%,50.0%,100.0%,100.0%,100.0%,50.0%

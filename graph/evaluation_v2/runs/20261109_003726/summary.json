@@ -1,0 +1,37 @@
+{
+  "run_timestamp": "20261109_003726",
+  "mode": "retrieval_only",
+  "total_cases": 21,
+  "valid_cases": 21,
+  "infra_errors": 0,
+  "pipeline_errors": 0,
+  "latency_p50": 0.024,
+  "latency_p95": 0.44,
+  "overall_metrics": {
+    "context_chars": 26122.0952,
+    "context_tokens_est": 6530.1429,
+    "field_recall": 1.0,
+    "node_precision": 0.3044,
+    "node_recall": 1.0
+  },
+  "by_type": {
+    "multi_condition_filter": {
+      "count": 21,
+      "context_chars": 26122.0952,
+      "context_tokens_est": 6530.1429,
+      "field_recall": 1.0,
+      "node_precision": 0.3044,
+      "node_recall": 1.0
+    }
+  },
+  "by_split": {
+    "dev": {
+      "count": 21,
+      "context_chars": 26122.0952,
+      "context_tokens_est": 6530.1429,
+      "field_recall": 1.0,
+      "node_precision": 0.3044,
+      "node_recall": 1.0
+    }
+  }
+}

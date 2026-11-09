@@ -1,0 +1,16 @@
+{
+  "git_commit": "dc146fccf6342625c2896d106b64bb3100d2a7a7",
+  "mode": "retrieval_only",
+  "base_url": "https://openrouter.ai/api/v1",
+  "flags": {
+    "mode": "retrieval_only",
+    "split": "dev",
+    "smoke": true,
+    "types": null,
+    "limit": null,
+    "resume": null,
+    "repeat": 1,
+    "workers": 1
+  },
+  "seed": 2026
+}

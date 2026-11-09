@@ -12,6 +12,8 @@ __pycache__/
 .env
 .env.*
 !.env.example
+graph/local_secrets.py
+traces/
 
 # IDE / editor files
 .vscode/
@@ -21,8 +23,10 @@ __pycache__/
 lightrag_data/
 lightrag_neo4j_test/
 
-# Generated embeddings
-embedding/data/*.npy
+# Generated embeddings & dumps
+*.npy
+*.dump
+.cache/
 embedding/data/*.csv
 
 # Logs

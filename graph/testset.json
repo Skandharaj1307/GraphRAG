@@ -1,0 +1,4673 @@
+[
+  {
+    "id": "TEST-0001",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-001545?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-001545"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-001545",
+      "root_cause": "The warehouse operator processed the POS receipt but the system raised a validation exception. The system escalated the manufacturing order due to missing configuration settings. The warehouse operator updated the manufacturing order while ensuring all mandatory fields were populated.",
+      "title": "Issue in Website: Proactive homogeneous initiative"
+    }
+  },
+  {
+    "id": "TEST-0002",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-005861?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-005861"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-005861",
+      "root_cause": "The system attempted to confirm the invoice and successfully completed the transaction.",
+      "title": "Issue in Helpdesk: Cross-platform exuding protocol"
+    }
+  },
+  {
+    "id": "TEST-0003",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-005614?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-005614"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-005614",
+      "root_cause": "The system attempted to confirm the employee record which resulted in an AccessError. The warehouse operator updated the POS receipt which resulted in an AccessError. The sales representative rejected the manufacturing order but encountered a permission error.",
+      "title": "Issue in CRM: Public-key static alliance"
+    }
+  },
+  {
+    "id": "TEST-0004",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-009891?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-009891"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-009891",
+      "root_cause": "The sales representative calculated the invoice while ensuring all mandatory fields were populated. The system updated the transfer after verifying the related documents.",
+      "title": "Issue in Subscriptions: Digitized systemic database"
+    }
+  },
+  {
+    "id": "TEST-0005",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-004306?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-004306"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-004306",
+      "root_cause": "The user deleted the POS receipt which resulted in an AccessError.",
+      "title": "Issue in Project: User-friendly maximized matrix"
+    }
+  },
+  {
+    "id": "TEST-0006",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-000668?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-000668"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-000668",
+      "root_cause": "The API endpoint validated the manufacturing order and successfully completed the transaction. The background job validated the employee record but the system raised a validation exception. The API endpoint validated the subscription renewal triggering a workflow notification.",
+      "title": "Issue in Accounting: Function-based explicit contingency"
+    }
+  },
+  {
+    "id": "TEST-0007",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-007515?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-007515"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-007515",
+      "root_cause": "The user deleted the manufacturing order due to missing configuration settings. The sales representative configured the incoming shipment while ensuring all mandatory fields were populated. The API endpoint processed the POS receipt which resulted in an AccessError.",
+      "title": "Issue in Purchase: Up-sized zero tolerance benchmark"
+    }
+  },
+  {
+    "id": "TEST-0008",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-008779?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-008779"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-008779",
+      "root_cause": "The user verified the employee record but encountered a permission error. The sales representative rejected the transfer but the system raised a validation exception. The accountant verified the POS receipt which resulted in an AccessError.",
+      "title": "Issue in Manufacturing: Future-proofed user-facing standardization"
+    }
+  },
+  {
+    "id": "TEST-0009",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-002009?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-002009"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-002009",
+      "root_cause": "The system validated the transfer but encountered a permission error. The sales representative processed the POS receipt but the system raised a validation exception. The accountant attempted to confirm the incoming shipment after verifying the related documents.",
+      "title": "Issue in Website: Face-to-face neutral frame"
+    }
+  },
+  {
+    "id": "TEST-0010",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-006182?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-006182"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-006182",
+      "root_cause": "The sales representative configured the manufacturing order triggering a workflow notification.",
+      "title": "Issue in Documents: Vision-oriented actuating protocol"
+    }
+  },
+  {
+    "id": "TEST-0011",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-001251?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-001251"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-001251",
+      "root_cause": "The accountant deleted the subscription renewal after verifying the related documents. The accountant rejected the invoice while ensuring all mandatory fields were populated.",
+      "title": "Issue in Manufacturing: Compatible asynchronous instruction set"
+    }
+  },
+  {
+    "id": "TEST-0012",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-009040?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-009040"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-009040",
+      "root_cause": "The warehouse operator processed the incoming shipment after verifying the related documents. The manager rejected the incoming shipment triggering a workflow notification.",
+      "title": "Issue in HR: Distributed client-server application"
+    }
+  },
+  {
+    "id": "TEST-0013",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-004779?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-004779"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-004779",
+      "root_cause": "The background job updated the subscription renewal and successfully completed the transaction.",
+      "title": "Issue in Manufacturing: Assimilated national extranet"
+    }
+  },
+  {
+    "id": "TEST-0014",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-005905?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-005905"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-005905",
+      "root_cause": "The accountant deleted the subscription renewal but encountered a permission error.",
+      "title": "Issue in HR: Assimilated demand-driven contingency"
+    }
+  },
+  {
+    "id": "TEST-0015",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-009457?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-009457"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-009457",
+      "root_cause": "The sales representative deleted the manufacturing order but the system raised a validation exception.",
+      "title": "Issue in Accounting: Exclusive tertiary capability"
+    }
+  },
+  {
+    "id": "TEST-0016",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-003115?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-003115"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-003115",
+      "root_cause": "The user verified the invoice after verifying the related documents.",
+      "title": "Issue in CRM: Function-based homogeneous website"
+    }
+  },
+  {
+    "id": "TEST-0017",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-001098?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-001098"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-001098",
+      "root_cause": "The manager rejected the transfer but the system raised a validation exception. The user attempted to confirm the POS receipt while ensuring all mandatory fields were populated.",
+      "title": "Issue in Documents: Future-proofed background knowledge user"
+    }
+  },
+  {
+    "id": "TEST-0018",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-000707?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-000707"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-000707",
+      "root_cause": "The user deleted the employee record due to missing configuration settings. The warehouse operator validated the POS receipt while ensuring all mandatory fields were populated.",
+      "title": "Issue in Helpdesk: Stand-alone intangible flexibility"
+    }
+  },
+  {
+    "id": "TEST-0019",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-003701?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-003701"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-003701",
+      "root_cause": "The system attempted to confirm the transfer after verifying the related documents. The background job escalated the employee record after verifying the related documents. The sales representative processed the incoming shipment and successfully completed the transaction.",
+      "title": "Issue in HR: Cross-platform explicit archive"
+    }
+  },
+  {
+    "id": "TEST-0020",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-004717?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-004717"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-004717",
+      "root_cause": "The system rejected the transfer due to missing configuration settings.",
+      "title": "Issue in Website: Open-architected background migration"
+    }
+  },
+  {
+    "id": "TEST-0021",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-001267?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-001267"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-001267",
+      "root_cause": "The accountant processed the incoming shipment which resulted in an AccessError.",
+      "title": "Issue in Subscriptions: Customizable 6thgeneration challenge"
+    }
+  },
+  {
+    "id": "TEST-0022",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-003782?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-003782"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-003782",
+      "root_cause": "The warehouse operator escalated the manufacturing order while ensuring all mandatory fields were populated. The accountant configured the subscription renewal while ensuring all mandatory fields were populated. The system deleted the employee record but the system raised a validation exception.",
+      "title": "Issue in Sales: Assimilated eco-centric capability"
+    }
+  },
+  {
+    "id": "TEST-0023",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-001615?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-001615"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-001615",
+      "root_cause": "The background job calculated the employee record but encountered a permission error.",
+      "title": "Issue in CRM: Configurable asynchronous ability"
+    }
+  },
+  {
+    "id": "TEST-0024",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-006208?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-006208"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-006208",
+      "root_cause": "The API endpoint rejected the manufacturing order but the system raised a validation exception.",
+      "title": "Issue in Knowledge: Polarized user-facing success"
+    }
+  },
+  {
+    "id": "TEST-0025",
+    "type": "defect_lookup",
+    "hops": 0,
+    "question": "What is the root cause of defect BUG-004530?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-004530"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-004530",
+      "root_cause": "The system updated the incoming shipment while ensuring all mandatory fields were populated. The background job verified the employee record which resulted in an AccessError. The accountant escalated the POS receipt due to missing configuration settings.",
+      "title": "Issue in Website: Configurable asymmetric implementation"
+    }
+  },
+  {
+    "id": "TEST-0026",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-007435?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-007435"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-007435",
+      "severity": "Blocker",
+      "priority": "P1",
+      "status": "New",
+      "assigned_to": "Brittany Wells"
+    }
+  },
+  {
+    "id": "TEST-0027",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-005975?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-005975"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-005975",
+      "severity": "Critical",
+      "priority": "P0",
+      "status": "Closed",
+      "assigned_to": "Aaron Hoffman"
+    }
+  },
+  {
+    "id": "TEST-0028",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-002637?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-002637"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-002637",
+      "severity": "Major",
+      "priority": "P1",
+      "status": "New",
+      "assigned_to": "Richard Costa"
+    }
+  },
+  {
+    "id": "TEST-0029",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-006063?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-006063"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-006063",
+      "severity": "Critical",
+      "priority": "P3",
+      "status": "Reopened",
+      "assigned_to": "Jaime Parker"
+    }
+  },
+  {
+    "id": "TEST-0030",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-005815?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-005815"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-005815",
+      "severity": "Major",
+      "priority": "P0",
+      "status": "In Progress",
+      "assigned_to": "Margaret Williams"
+    }
+  },
+  {
+    "id": "TEST-0031",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-003407?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-003407"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-003407",
+      "severity": "Critical",
+      "priority": "P0",
+      "status": "Closed",
+      "assigned_to": "David Bishop"
+    }
+  },
+  {
+    "id": "TEST-0032",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-004359?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-004359"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-004359",
+      "severity": "Major",
+      "priority": "P2",
+      "status": "Reopened",
+      "assigned_to": "Mary Nguyen"
+    }
+  },
+  {
+    "id": "TEST-0033",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-001131?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-001131"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-001131",
+      "severity": "Minor",
+      "priority": "P3",
+      "status": "Closed",
+      "assigned_to": "James Roberts"
+    }
+  },
+  {
+    "id": "TEST-0034",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-002776?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-002776"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-002776",
+      "severity": "Minor",
+      "priority": "P0",
+      "status": "In Progress",
+      "assigned_to": "Kevin Gomez"
+    }
+  },
+  {
+    "id": "TEST-0035",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-008766?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-008766"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-008766",
+      "severity": "Critical",
+      "priority": "P2",
+      "status": "In Progress",
+      "assigned_to": "George Lucas"
+    }
+  },
+  {
+    "id": "TEST-0036",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-003990?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-003990"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-003990",
+      "severity": "Minor",
+      "priority": "P2",
+      "status": "In Progress",
+      "assigned_to": "Stephanie Love"
+    }
+  },
+  {
+    "id": "TEST-0037",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-002650?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-002650"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-002650",
+      "severity": "Blocker",
+      "priority": "P3",
+      "status": "Resolved",
+      "assigned_to": "Daniel Johnson"
+    }
+  },
+  {
+    "id": "TEST-0038",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-007584?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-007584"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-007584",
+      "severity": "Critical",
+      "priority": "P3",
+      "status": "Reopened",
+      "assigned_to": "Rhonda Rivera"
+    }
+  },
+  {
+    "id": "TEST-0039",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-006217?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-006217"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-006217",
+      "severity": "Major",
+      "priority": "P3",
+      "status": "In Progress",
+      "assigned_to": "Felicia Barber"
+    }
+  },
+  {
+    "id": "TEST-0040",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-004409?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-004409"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-004409",
+      "severity": "Major",
+      "priority": "P0",
+      "status": "In Progress",
+      "assigned_to": "Tony Shepherd"
+    }
+  },
+  {
+    "id": "TEST-0041",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-009144?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-009144"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-009144",
+      "severity": "Major",
+      "priority": "P3",
+      "status": "In Progress",
+      "assigned_to": "Marissa Smith"
+    }
+  },
+  {
+    "id": "TEST-0042",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-003575?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-003575"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-003575",
+      "severity": "Minor",
+      "priority": "P0",
+      "status": "Closed",
+      "assigned_to": "Tonya Simpson"
+    }
+  },
+  {
+    "id": "TEST-0043",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-005305?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-005305"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-005305",
+      "severity": "Minor",
+      "priority": "P0",
+      "status": "Resolved",
+      "assigned_to": "Tina Kim"
+    }
+  },
+  {
+    "id": "TEST-0044",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-000876?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-000876"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-000876",
+      "severity": "Critical",
+      "priority": "P0",
+      "status": "Closed",
+      "assigned_to": "Crystal Jordan"
+    }
+  },
+  {
+    "id": "TEST-0045",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-003730?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-003730"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-003730",
+      "severity": "Major",
+      "priority": "P0",
+      "status": "In Progress",
+      "assigned_to": "Peggy Duffy"
+    }
+  },
+  {
+    "id": "TEST-0046",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-000481?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-000481"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-000481",
+      "severity": "Blocker",
+      "priority": "P1",
+      "status": "New",
+      "assigned_to": "Ryan Wilson"
+    }
+  },
+  {
+    "id": "TEST-0047",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-005160?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-005160"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-005160",
+      "severity": "Major",
+      "priority": "P0",
+      "status": "In Progress",
+      "assigned_to": "Beverly Garcia"
+    }
+  },
+  {
+    "id": "TEST-0048",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-006573?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-006573"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-006573",
+      "severity": "Blocker",
+      "priority": "P0",
+      "status": "Closed",
+      "assigned_to": "Adam Sandoval"
+    }
+  },
+  {
+    "id": "TEST-0049",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-004371?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-004371"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-004371",
+      "severity": "Minor",
+      "priority": "P2",
+      "status": "In Progress",
+      "assigned_to": "Chelsea Rios"
+    }
+  },
+  {
+    "id": "TEST-0050",
+    "type": "defect_multi_property",
+    "hops": 0,
+    "question": "What are the severity, priority, status, and assigned owner for defect BUG-001045?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-001045"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-001045",
+      "severity": "Major",
+      "priority": "P1",
+      "status": "Reopened",
+      "assigned_to": "Monica Henderson"
+    }
+  },
+  {
+    "id": "TEST-0051",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-003422, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-003422"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-003422",
+      "test_case_id": "TC-004710",
+      "build_number": "B-5388",
+      "tester": "Jacqueline Sheppard"
+    }
+  },
+  {
+    "id": "TEST-0052",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-009290, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-009290"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-009290",
+      "test_case_id": "TC-013388",
+      "build_number": "B-9326",
+      "tester": "Amy Olson"
+    }
+  },
+  {
+    "id": "TEST-0053",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-005132, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-005132"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-005132",
+      "test_case_id": "TC-003438",
+      "build_number": "B-8184",
+      "tester": "Beverly Reese"
+    }
+  },
+  {
+    "id": "TEST-0054",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-003449, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-003449"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-003449",
+      "test_case_id": "TC-017956",
+      "build_number": "B-6635",
+      "tester": "Patricia Perkins"
+    }
+  },
+  {
+    "id": "TEST-0055",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-008172, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-008172"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-008172",
+      "test_case_id": "TC-013766",
+      "build_number": "B-3196",
+      "tester": "Jessica Bullock"
+    }
+  },
+  {
+    "id": "TEST-0056",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-006463, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-006463"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-006463",
+      "test_case_id": "TC-012835",
+      "build_number": "B-1224",
+      "tester": "Bryan Douglas"
+    }
+  },
+  {
+    "id": "TEST-0057",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-007505, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-007505"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-007505",
+      "test_case_id": "TC-006947",
+      "build_number": "B-5373",
+      "tester": "Lisa Young MD"
+    }
+  },
+  {
+    "id": "TEST-0058",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-002305, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-002305"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-002305",
+      "test_case_id": "TC-002866",
+      "build_number": "B-2179",
+      "tester": "Allen Gentry"
+    }
+  },
+  {
+    "id": "TEST-0059",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-004312, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-004312"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-004312",
+      "test_case_id": "TC-016598",
+      "build_number": "B-9950",
+      "tester": "Ronald Bolton"
+    }
+  },
+  {
+    "id": "TEST-0060",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-002252, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-002252"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-002252",
+      "test_case_id": "TC-014378",
+      "build_number": "B-1446",
+      "tester": "Jessica Clark"
+    }
+  },
+  {
+    "id": "TEST-0061",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-004009, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-004009"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-004009",
+      "test_case_id": "TC-001092",
+      "build_number": "B-8710",
+      "tester": "James Rice"
+    }
+  },
+  {
+    "id": "TEST-0062",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-009194, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-009194"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-009194",
+      "test_case_id": "TC-006230",
+      "build_number": "B-5564",
+      "tester": "Henry Jacobs"
+    }
+  },
+  {
+    "id": "TEST-0063",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-008824, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-008824"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-008824",
+      "test_case_id": "TC-016993",
+      "build_number": "B-3206",
+      "tester": "Valerie Ward"
+    }
+  },
+  {
+    "id": "TEST-0064",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-004276, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-004276"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-004276",
+      "test_case_id": "TC-011091",
+      "build_number": "B-5571",
+      "tester": "Kathy Campbell"
+    }
+  },
+  {
+    "id": "TEST-0065",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-009575, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-009575"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-009575",
+      "test_case_id": "TC-003824",
+      "build_number": "B-5434",
+      "tester": "Jacob Simmons"
+    }
+  },
+  {
+    "id": "TEST-0066",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-007003, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-007003"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-007003",
+      "test_case_id": "TC-001760",
+      "build_number": "B-7897",
+      "tester": "Robert Elliott"
+    }
+  },
+  {
+    "id": "TEST-0067",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-009558, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-009558"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-009558",
+      "test_case_id": "TC-011851",
+      "build_number": "B-4541",
+      "tester": "Ray Glover Jr."
+    }
+  },
+  {
+    "id": "TEST-0068",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-006524, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-006524"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-006524",
+      "test_case_id": "TC-012705",
+      "build_number": "B-2862",
+      "tester": "Sarah Roberts MD"
+    }
+  },
+  {
+    "id": "TEST-0069",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-005910, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-005910"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-005910",
+      "test_case_id": "TC-015585",
+      "build_number": "B-9103",
+      "tester": "Deanna Miller"
+    }
+  },
+  {
+    "id": "TEST-0070",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-003560, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-003560"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-003560",
+      "test_case_id": "TC-018683",
+      "build_number": "B-1563",
+      "tester": "Mark Lopez"
+    }
+  },
+  {
+    "id": "TEST-0071",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-002231, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-002231"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-002231",
+      "test_case_id": "TC-006218",
+      "build_number": "B-7032",
+      "tester": "Derrick Rowe"
+    }
+  },
+  {
+    "id": "TEST-0072",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-008341, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-008341"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-008341",
+      "test_case_id": "TC-015164",
+      "build_number": "B-4091",
+      "tester": "Jennifer Wilson"
+    }
+  },
+  {
+    "id": "TEST-0073",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-008077, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-008077"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-008077",
+      "test_case_id": "TC-013219",
+      "build_number": "B-1205",
+      "tester": "Rodney Hughes"
+    }
+  },
+  {
+    "id": "TEST-0074",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-001450, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-001450"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-001450",
+      "test_case_id": "TC-018583",
+      "build_number": "B-3274",
+      "tester": "Susan Johnson"
+    }
+  },
+  {
+    "id": "TEST-0075",
+    "type": "defect_to_testcase",
+    "hops": 2,
+    "question": "Which test case produced defect BUG-000728, and who executed the run in which build?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-000728"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-000728",
+      "test_case_id": "TC-016339",
+      "build_number": "B-9846",
+      "tester": "Angel Mercado"
+    }
+  },
+  {
+    "id": "TEST-0076",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-005349.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-005349"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-005349",
+      "defect_ids": [
+        "BUG-000950"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0077",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-014015.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-014015"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-014015",
+      "defect_ids": [
+        "BUG-001375"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0078",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-010511.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-010511"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-010511",
+      "defect_ids": [
+        "BUG-009134",
+        "BUG-009953"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0079",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-018583.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-018583"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-018583",
+      "defect_ids": [
+        "BUG-001450"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0080",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-016305.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-016305"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-016305",
+      "defect_ids": [
+        "BUG-004808"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0081",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-007519.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-007519"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-007519",
+      "defect_ids": [
+        "BUG-008254"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0082",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-011190.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-011190"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-011190",
+      "defect_ids": [
+        "BUG-000523",
+        "BUG-007769"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0083",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-009612.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-009612"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-009612",
+      "defect_ids": [
+        "BUG-004209",
+        "BUG-005881"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0084",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-014962.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-014962"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-014962",
+      "defect_ids": [
+        "BUG-004159",
+        "BUG-005276"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0085",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-017951.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-017951"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-017951",
+      "defect_ids": [
+        "BUG-008239"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0086",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-000112.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-000112"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-000112",
+      "defect_ids": [
+        "BUG-005558"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0087",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-016336.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-016336"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-016336",
+      "defect_ids": [
+        "BUG-006751",
+        "BUG-007576"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0088",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-011404.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-011404"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-011404",
+      "defect_ids": [
+        "BUG-002420",
+        "BUG-005327"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0089",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-014129.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-014129"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-014129",
+      "defect_ids": [
+        "BUG-007213",
+        "BUG-007214"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0090",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-010950.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-010950"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-010950",
+      "defect_ids": [
+        "BUG-000070",
+        "BUG-000731",
+        "BUG-000850"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0091",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-011157.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-011157"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-011157",
+      "defect_ids": [
+        "BUG-000997",
+        "BUG-005169",
+        "BUG-008846"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0092",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-019058.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-019058"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-019058",
+      "defect_ids": [
+        "BUG-006869"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0093",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-011406.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-011406"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-011406",
+      "defect_ids": [
+        "BUG-002593",
+        "BUG-008422",
+        "BUG-010000"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0094",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-013049.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-013049"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-013049",
+      "defect_ids": [
+        "BUG-009437"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0095",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-012627.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-012627"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-012627",
+      "defect_ids": [
+        "BUG-003562",
+        "BUG-009844"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0096",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-008049.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-008049"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-008049",
+      "defect_ids": [
+        "BUG-000967",
+        "BUG-007521"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0097",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-016199.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-016199"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-016199",
+      "defect_ids": [
+        "BUG-002921",
+        "BUG-004221"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0098",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-018233.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-018233"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-018233",
+      "defect_ids": [
+        "BUG-004998"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0099",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-014607.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-014607"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-014607",
+      "defect_ids": [
+        "BUG-001433"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0100",
+    "type": "testcase_to_defects",
+    "hops": 2,
+    "question": "List all defect IDs found during execution of test case TC-002280.",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-002280"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-002280",
+      "defect_ids": [
+        "BUG-005298",
+        "BUG-007151"
+      ]
+    }
+  },
+  {
+    "id": "TEST-0101",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-009243 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-009243"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-009243",
+      "total_executions": 4,
+      "failed_executions": 3
+    }
+  },
+  {
+    "id": "TEST-0102",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-015661 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-015661"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-015661",
+      "total_executions": 2,
+      "failed_executions": 1
+    }
+  },
+  {
+    "id": "TEST-0103",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-009923 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-009923"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-009923",
+      "total_executions": 1,
+      "failed_executions": 1
+    }
+  },
+  {
+    "id": "TEST-0104",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-003655 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-003655"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-003655",
+      "total_executions": 2,
+      "failed_executions": 1
+    }
+  },
+  {
+    "id": "TEST-0105",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-013416 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-013416"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-013416",
+      "total_executions": 1,
+      "failed_executions": 1
+    }
+  },
+  {
+    "id": "TEST-0106",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-005772 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-005772"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-005772",
+      "total_executions": 3,
+      "failed_executions": 1
+    }
+  },
+  {
+    "id": "TEST-0107",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-002970 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-002970"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-002970",
+      "total_executions": 2,
+      "failed_executions": 1
+    }
+  },
+  {
+    "id": "TEST-0108",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-005894 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-005894"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-005894",
+      "total_executions": 2,
+      "failed_executions": 1
+    }
+  },
+  {
+    "id": "TEST-0109",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-008122 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-008122"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-008122",
+      "total_executions": 2,
+      "failed_executions": 1
+    }
+  },
+  {
+    "id": "TEST-0110",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-010711 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-010711"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-010711",
+      "total_executions": 1,
+      "failed_executions": 1
+    }
+  },
+  {
+    "id": "TEST-0111",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-019819 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-019819"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-019819",
+      "total_executions": 2,
+      "failed_executions": 1
+    }
+  },
+  {
+    "id": "TEST-0112",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-003036 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-003036"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-003036",
+      "total_executions": 1,
+      "failed_executions": 1
+    }
+  },
+  {
+    "id": "TEST-0113",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-011951 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-011951"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-011951",
+      "total_executions": 5,
+      "failed_executions": 3
+    }
+  },
+  {
+    "id": "TEST-0114",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-018896 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-018896"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-018896",
+      "total_executions": 1,
+      "failed_executions": 1
+    }
+  },
+  {
+    "id": "TEST-0115",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-015440 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-015440"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-015440",
+      "total_executions": 1,
+      "failed_executions": 1
+    }
+  },
+  {
+    "id": "TEST-0116",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-005370 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-005370"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-005370",
+      "total_executions": 3,
+      "failed_executions": 2
+    }
+  },
+  {
+    "id": "TEST-0117",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-006530 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-006530"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-006530",
+      "total_executions": 3,
+      "failed_executions": 1
+    }
+  },
+  {
+    "id": "TEST-0118",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-004059 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-004059"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-004059",
+      "total_executions": 1,
+      "failed_executions": 1
+    }
+  },
+  {
+    "id": "TEST-0119",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-014920 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-014920"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-014920",
+      "total_executions": 2,
+      "failed_executions": 1
+    }
+  },
+  {
+    "id": "TEST-0120",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-004513 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-004513"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-004513",
+      "total_executions": 2,
+      "failed_executions": 1
+    }
+  },
+  {
+    "id": "TEST-0121",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-008175 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-008175"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-008175",
+      "total_executions": 2,
+      "failed_executions": 2
+    }
+  },
+  {
+    "id": "TEST-0122",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-004627 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-004627"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-004627",
+      "total_executions": 2,
+      "failed_executions": 1
+    }
+  },
+  {
+    "id": "TEST-0123",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-014770 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-014770"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-014770",
+      "total_executions": 4,
+      "failed_executions": 1
+    }
+  },
+  {
+    "id": "TEST-0124",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-011206 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-011206"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-011206",
+      "total_executions": 3,
+      "failed_executions": 1
+    }
+  },
+  {
+    "id": "TEST-0125",
+    "type": "testcase_executions_summary",
+    "hops": 1,
+    "question": "How many times has test case TC-009002 been executed, and how many runs failed?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-009002"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_execution_analysis",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-009002",
+      "total_executions": 1,
+      "failed_executions": 1
+    }
+  },
+  {
+    "id": "TEST-0126",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-002194 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-002194"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-002194",
+      "environment": "UAT",
+      "browser": "Edge",
+      "operating_system": "iOS",
+      "status": "Passed"
+    }
+  },
+  {
+    "id": "TEST-0127",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-017443 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-017443"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-017443",
+      "environment": "DEV",
+      "browser": "Firefox",
+      "operating_system": "Android",
+      "status": "Passed"
+    }
+  },
+  {
+    "id": "TEST-0128",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-004059 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-004059"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-004059",
+      "environment": "UAT",
+      "browser": "Chrome",
+      "operating_system": "Ubuntu",
+      "status": "Failed"
+    }
+  },
+  {
+    "id": "TEST-0129",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-004146 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-004146"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-004146",
+      "environment": "STAGING",
+      "browser": "Edge",
+      "operating_system": "iOS",
+      "status": "Skipped"
+    }
+  },
+  {
+    "id": "TEST-0130",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-015557 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-015557"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-015557",
+      "environment": "QA",
+      "browser": "Safari",
+      "operating_system": "Ubuntu",
+      "status": "Failed"
+    }
+  },
+  {
+    "id": "TEST-0131",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-018007 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-018007"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-018007",
+      "environment": "QA",
+      "browser": "Firefox",
+      "operating_system": "iOS",
+      "status": "Passed"
+    }
+  },
+  {
+    "id": "TEST-0132",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-005356 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-005356"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-005356",
+      "environment": "DEV",
+      "browser": "Safari",
+      "operating_system": "Windows 11",
+      "status": "Skipped"
+    }
+  },
+  {
+    "id": "TEST-0133",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-008639 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-008639"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-008639",
+      "environment": "QA",
+      "browser": "Safari",
+      "operating_system": "Ubuntu",
+      "status": "Failed"
+    }
+  },
+  {
+    "id": "TEST-0134",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-017277 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-017277"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-017277",
+      "environment": "UAT",
+      "browser": "Firefox",
+      "operating_system": "Ubuntu",
+      "status": "Skipped"
+    }
+  },
+  {
+    "id": "TEST-0135",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-019876 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-019876"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-019876",
+      "environment": "QA",
+      "browser": "Safari",
+      "operating_system": "Ubuntu",
+      "status": "Blocked"
+    }
+  },
+  {
+    "id": "TEST-0136",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-013841 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-013841"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-013841",
+      "environment": "UAT",
+      "browser": "Chrome",
+      "operating_system": "Ubuntu",
+      "status": "Skipped"
+    }
+  },
+  {
+    "id": "TEST-0137",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-006890 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-006890"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-006890",
+      "environment": "DEV",
+      "browser": "Edge",
+      "operating_system": "macOS",
+      "status": "Failed"
+    }
+  },
+  {
+    "id": "TEST-0138",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-017659 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-017659"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-017659",
+      "environment": "STAGING",
+      "browser": "Edge",
+      "operating_system": "Ubuntu",
+      "status": "Blocked"
+    }
+  },
+  {
+    "id": "TEST-0139",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-006539 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-006539"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-006539",
+      "environment": "UAT",
+      "browser": "Firefox",
+      "operating_system": "macOS",
+      "status": "Passed"
+    }
+  },
+  {
+    "id": "TEST-0140",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-010174 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-010174"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-010174",
+      "environment": "STAGING",
+      "browser": "Safari",
+      "operating_system": "iOS",
+      "status": "Blocked"
+    }
+  },
+  {
+    "id": "TEST-0141",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-013047 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-013047"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-013047",
+      "environment": "QA",
+      "browser": "Chrome",
+      "operating_system": "Android",
+      "status": "Passed"
+    }
+  },
+  {
+    "id": "TEST-0142",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-012206 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-012206"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-012206",
+      "environment": "UAT",
+      "browser": "Safari",
+      "operating_system": "Android",
+      "status": "Passed"
+    }
+  },
+  {
+    "id": "TEST-0143",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-014333 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-014333"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-014333",
+      "environment": "DEV",
+      "browser": "Chrome",
+      "operating_system": "Ubuntu",
+      "status": "Blocked"
+    }
+  },
+  {
+    "id": "TEST-0144",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-016946 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-016946"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-016946",
+      "environment": "STAGING",
+      "browser": "Safari",
+      "operating_system": "Android",
+      "status": "Blocked"
+    }
+  },
+  {
+    "id": "TEST-0145",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-014773 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-014773"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-014773",
+      "environment": "DEV",
+      "browser": "Edge",
+      "operating_system": "macOS",
+      "status": "Failed"
+    }
+  },
+  {
+    "id": "TEST-0146",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-003901 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-003901"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-003901",
+      "environment": "STAGING",
+      "browser": "Safari",
+      "operating_system": "Android",
+      "status": "Passed"
+    }
+  },
+  {
+    "id": "TEST-0147",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-008076 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-008076"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-008076",
+      "environment": "DEV",
+      "browser": "Firefox",
+      "operating_system": "Android",
+      "status": "Skipped"
+    }
+  },
+  {
+    "id": "TEST-0148",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-007313 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-007313"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-007313",
+      "environment": "STAGING",
+      "browser": "Firefox",
+      "operating_system": "iOS",
+      "status": "Skipped"
+    }
+  },
+  {
+    "id": "TEST-0149",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-002024 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-002024"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-002024",
+      "environment": "QA",
+      "browser": "Edge",
+      "operating_system": "macOS",
+      "status": "Passed"
+    }
+  },
+  {
+    "id": "TEST-0150",
+    "type": "execution_context",
+    "hops": 0,
+    "question": "What environment, browser, and operating system was test execution EXEC-011040 run in?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-011040"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "execution_id": "EXEC-011040",
+      "environment": "STAGING",
+      "browser": "Chrome",
+      "operating_system": "iOS",
+      "status": "Passed"
+    }
+  },
+  {
+    "id": "TEST-0151",
+    "type": "screenshot_lookup",
+    "hops": 1,
+    "question": "What error or warning messages appear in the screenshot captured for defect BUG-008780?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-008780"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-008780",
+      "screenshot_id": "SCR-ocr_batch_001-0488",
+      "error_messages": [
+        "The warehouse operator rejected the invoice due to missing configuration settings."
+      ],
+      "warning_messages": []
+    }
+  },
+  {
+    "id": "TEST-0152",
+    "type": "screenshot_lookup",
+    "hops": 1,
+    "question": "What error or warning messages appear in the screenshot captured for defect BUG-002621?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-002621"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-002621",
+      "screenshot_id": "SCR-ocr_batch_010-0382",
+      "error_messages": [
+        "The warehouse operator attempted to confirm the subscription renewal and successfully completed the transaction."
+      ],
+      "warning_messages": [
+        "The warehouse operator attempted to confirm the employee record but encountered a permission error."
+      ]
+    }
+  },
+  {
+    "id": "TEST-0153",
+    "type": "screenshot_lookup",
+    "hops": 1,
+    "question": "What error or warning messages appear in the screenshot captured for defect BUG-000484?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-000484"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-000484",
+      "screenshot_id": "SCR-ocr_batch_009-1052",
+      "error_messages": [
+        "The API endpoint updated the invoice while ensuring all mandatory fields were populated."
+      ],
+      "warning_messages": [
+        "The manager verified the manufacturing order triggering a workflow notification."
+      ]
+    }
+  },
+  {
+    "id": "TEST-0154",
+    "type": "screenshot_lookup",
+    "hops": 1,
+    "question": "What error or warning messages appear in the screenshot captured for defect BUG-002301?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-002301"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-002301",
+      "screenshot_id": "SCR-ocr_batch_004-0906",
+      "error_messages": [
+        "The manager configured the invoice after verifying the related documents."
+      ],
+      "warning_messages": []
+    }
+  },
+  {
+    "id": "TEST-0155",
+    "type": "screenshot_lookup",
+    "hops": 1,
+    "question": "What error or warning messages appear in the screenshot captured for defect BUG-004986?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-004986"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-004986",
+      "screenshot_id": "SCR-ocr_batch_010-0385",
+      "error_messages": [
+        "The accountant rejected the invoice due to missing configuration settings."
+      ],
+      "warning_messages": []
+    }
+  },
+  {
+    "id": "TEST-0156",
+    "type": "screenshot_lookup",
+    "hops": 1,
+    "question": "What error or warning messages appear in the screenshot captured for defect BUG-001993?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-001993"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-001993",
+      "screenshot_id": "SCR-ocr_batch_004-0685",
+      "error_messages": [
+        "The sales representative verified the employee record triggering a workflow notification."
+      ],
+      "warning_messages": [
+        "The system processed the invoice and successfully completed the transaction."
+      ]
+    }
+  },
+  {
+    "id": "TEST-0157",
+    "type": "screenshot_lookup",
+    "hops": 1,
+    "question": "What error or warning messages appear in the screenshot captured for defect BUG-001310?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-001310"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-001310",
+      "screenshot_id": "SCR-ocr_batch_001-0164",
+      "error_messages": [
+        "The accountant configured the employee record while ensuring all mandatory fields were populated."
+      ],
+      "warning_messages": [
+        "The system attempted to confirm the transfer due to missing configuration settings."
+      ]
+    }
+  },
+  {
+    "id": "TEST-0158",
+    "type": "screenshot_lookup",
+    "hops": 1,
+    "question": "What error or warning messages appear in the screenshot captured for defect BUG-000499?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-000499"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-000499",
+      "screenshot_id": "SCR-ocr_batch_002-0185",
+      "error_messages": [
+        "The user rejected the employee record but encountered a permission error."
+      ],
+      "warning_messages": []
+    }
+  },
+  {
+    "id": "TEST-0159",
+    "type": "screenshot_lookup",
+    "hops": 1,
+    "question": "What error or warning messages appear in the screenshot captured for defect BUG-000926?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-000926"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-000926",
+      "screenshot_id": "SCR-ocr_batch_010-1312",
+      "error_messages": [],
+      "warning_messages": [
+        "The API endpoint processed the invoice while ensuring all mandatory fields were populated."
+      ]
+    }
+  },
+  {
+    "id": "TEST-0160",
+    "type": "screenshot_lookup",
+    "hops": 1,
+    "question": "What error or warning messages appear in the screenshot captured for defect BUG-000348?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-000348"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "defect_id": "BUG-000348",
+      "screenshot_id": "SCR-ocr_batch_001-1318",
+      "error_messages": [
+        "The user configured the employee record due to missing configuration settings."
+      ],
+      "warning_messages": []
+    }
+  },
+  {
+    "id": "TEST-0161",
+    "type": "screenshot_lookup",
+    "hops": 1,
+    "question": "What screen name and UI messages are shown in the screenshot for test case TC-018868?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-018868"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "screenshot_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-018868",
+      "screenshot_id": "SCR-ocr_batch_004-0880",
+      "screen_name": "POS Dashboard",
+      "error_messages": [
+        "The warehouse operator verified the incoming shipment due to missing configuration settings."
+      ]
+    }
+  },
+  {
+    "id": "TEST-0162",
+    "type": "screenshot_lookup",
+    "hops": 1,
+    "question": "What screen name and UI messages are shown in the screenshot for test case TC-019132?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-019132"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "screenshot_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-019132",
+      "screenshot_id": "SCR-ocr_batch_002-0111",
+      "screen_name": "HR Dashboard",
+      "error_messages": [
+        "The system updated the employee record after verifying the related documents."
+      ]
+    }
+  },
+  {
+    "id": "TEST-0163",
+    "type": "screenshot_lookup",
+    "hops": 1,
+    "question": "What screen name and UI messages are shown in the screenshot for test case TC-012042?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-012042"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "screenshot_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-012042",
+      "screenshot_id": "SCR-ocr_batch_001-0726",
+      "screen_name": "Manufacturing Dashboard",
+      "error_messages": [
+        "The user escalated the manufacturing order while ensuring all mandatory fields were populated."
+      ]
+    }
+  },
+  {
+    "id": "TEST-0164",
+    "type": "screenshot_lookup",
+    "hops": 1,
+    "question": "What screen name and UI messages are shown in the screenshot for test case TC-001607?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-001607"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "screenshot_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-001607",
+      "screenshot_id": "SCR-ocr_batch_006-0342",
+      "screen_name": "Accounting Dashboard",
+      "error_messages": []
+    }
+  },
+  {
+    "id": "TEST-0165",
+    "type": "screenshot_lookup",
+    "hops": 1,
+    "question": "What screen name and UI messages are shown in the screenshot for test case TC-004174?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-004174"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "screenshot_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-004174",
+      "screenshot_id": "SCR-ocr_batch_002-0179",
+      "screen_name": "Sales Dashboard",
+      "error_messages": []
+    }
+  },
+  {
+    "id": "TEST-0166",
+    "type": "screenshot_lookup",
+    "hops": 1,
+    "question": "What screen name and UI messages are shown in the screenshot for test case TC-006736?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-006736"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "screenshot_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-006736",
+      "screenshot_id": "SCR-ocr_batch_009-0198",
+      "screen_name": "Inventory Dashboard",
+      "error_messages": [
+        "The API endpoint rejected the subscription renewal while ensuring all mandatory fields were populated."
+      ]
+    }
+  },
+  {
+    "id": "TEST-0167",
+    "type": "screenshot_lookup",
+    "hops": 1,
+    "question": "What screen name and UI messages are shown in the screenshot for test case TC-005132?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-005132"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "screenshot_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-005132",
+      "screenshot_id": "SCR-ocr_batch_004-1089",
+      "screen_name": "Quality Dashboard",
+      "error_messages": [
+        "The accountant escalated the transfer after verifying the related documents."
+      ]
+    }
+  },
+  {
+    "id": "TEST-0168",
+    "type": "screenshot_lookup",
+    "hops": 1,
+    "question": "What screen name and UI messages are shown in the screenshot for test case TC-002330?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-002330"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "screenshot_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-002330",
+      "screenshot_id": "SCR-ocr_batch_005-0561",
+      "screen_name": "Studio Dashboard",
+      "error_messages": [
+        "The sales representative rejected the POS receipt but the system raised a validation exception."
+      ]
+    }
+  },
+  {
+    "id": "TEST-0169",
+    "type": "screenshot_lookup",
+    "hops": 1,
+    "question": "What screen name and UI messages are shown in the screenshot for test case TC-003234?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-003234"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "screenshot_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-003234",
+      "screenshot_id": "SCR-ocr_batch_008-0986",
+      "screen_name": "Project Dashboard",
+      "error_messages": [
+        "The accountant attempted to confirm the transfer triggering a workflow notification."
+      ]
+    }
+  },
+  {
+    "id": "TEST-0170",
+    "type": "screenshot_lookup",
+    "hops": 1,
+    "question": "What screen name and UI messages are shown in the screenshot for test case TC-013222?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-013222"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "screenshot_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": {
+      "test_case_id": "TC-013222",
+      "screenshot_id": "SCR-ocr_batch_004-0554",
+      "screen_name": "Quality Dashboard",
+      "error_messages": [
+        "The system updated the invoice and successfully completed the transaction."
+      ]
+    }
+  },
+  {
+    "id": "TEST-0171",
+    "type": "unanswerable",
+    "hops": 0,
+    "question": "What is the root cause and assigned developer for defect BUG-99665427?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-99665427"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": null
+  },
+  {
+    "id": "TEST-0172",
+    "type": "unanswerable",
+    "hops": 0,
+    "question": "What is the root cause and assigned developer for defect BUG-99238739?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-99238739"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": null
+  },
+  {
+    "id": "TEST-0173",
+    "type": "unanswerable",
+    "hops": 0,
+    "question": "What is the root cause and assigned developer for defect BUG-99858490?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-99858490"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": null
+  },
+  {
+    "id": "TEST-0174",
+    "type": "unanswerable",
+    "hops": 0,
+    "question": "What is the root cause and assigned developer for defect BUG-99698782?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-99698782"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": null
+  },
+  {
+    "id": "TEST-0175",
+    "type": "unanswerable",
+    "hops": 0,
+    "question": "What is the root cause and assigned developer for defect BUG-99704201?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-99704201"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": null
+  },
+  {
+    "id": "TEST-0176",
+    "type": "unanswerable",
+    "hops": 0,
+    "question": "What is the root cause and assigned developer for defect BUG-99595631?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-99595631"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": null
+  },
+  {
+    "id": "TEST-0177",
+    "type": "unanswerable",
+    "hops": 0,
+    "question": "What is the root cause and assigned developer for defect BUG-99354801?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-99354801"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": null
+  },
+  {
+    "id": "TEST-0178",
+    "type": "unanswerable",
+    "hops": 0,
+    "question": "What is the root cause and assigned developer for defect BUG-99922733?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-99922733"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": null
+  },
+  {
+    "id": "TEST-0179",
+    "type": "unanswerable",
+    "hops": 0,
+    "question": "What is the root cause and assigned developer for defect BUG-99595948?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-99595948"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": null
+  },
+  {
+    "id": "TEST-0180",
+    "type": "unanswerable",
+    "hops": 0,
+    "question": "What is the root cause and assigned developer for defect BUG-99946721?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": [
+        "BUG-99946721"
+      ]
+    },
+    "expected_intent": "defect_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": null
+  },
+  {
+    "id": "TEST-0181",
+    "type": "unanswerable",
+    "hops": 0,
+    "question": "What are the execution steps and expected results for test case TC-99526833?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-99526833"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": null
+  },
+  {
+    "id": "TEST-0182",
+    "type": "unanswerable",
+    "hops": 0,
+    "question": "What are the execution steps and expected results for test case TC-99299659?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-99299659"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": null
+  },
+  {
+    "id": "TEST-0183",
+    "type": "unanswerable",
+    "hops": 0,
+    "question": "What are the execution steps and expected results for test case TC-99198907?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-99198907"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": null
+  },
+  {
+    "id": "TEST-0184",
+    "type": "unanswerable",
+    "hops": 0,
+    "question": "What are the execution steps and expected results for test case TC-99201639?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-99201639"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": null
+  },
+  {
+    "id": "TEST-0185",
+    "type": "unanswerable",
+    "hops": 0,
+    "question": "What are the execution steps and expected results for test case TC-99790993?",
+    "expected_entities": {
+      "test_case_ids": [
+        "TC-99790993"
+      ],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "testcase_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": null
+  },
+  {
+    "id": "TEST-0186",
+    "type": "unanswerable",
+    "hops": 0,
+    "question": "Which build and browser was execution EXEC-99551989 run on?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-99551989"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": null
+  },
+  {
+    "id": "TEST-0187",
+    "type": "unanswerable",
+    "hops": 0,
+    "question": "Which build and browser was execution EXEC-99471507 run on?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-99471507"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": null
+  },
+  {
+    "id": "TEST-0188",
+    "type": "unanswerable",
+    "hops": 0,
+    "question": "Which build and browser was execution EXEC-99544154 run on?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-99544154"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": null
+  },
+  {
+    "id": "TEST-0189",
+    "type": "unanswerable",
+    "hops": 0,
+    "question": "Which build and browser was execution EXEC-99531071 run on?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-99531071"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": null
+  },
+  {
+    "id": "TEST-0190",
+    "type": "unanswerable",
+    "hops": 0,
+    "question": "Which build and browser was execution EXEC-99589710 run on?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [
+        "EXEC-99589710"
+      ],
+      "defect_ids": []
+    },
+    "expected_intent": "execution_lookup",
+    "expected_route": "neo4j",
+    "gold_answer": null
+  },
+  {
+    "id": "TEST-0191",
+    "type": "broad_summary",
+    "hops": 0,
+    "question": "Which software modules have recorded the highest number of critical or blocker defects?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "general_test_analysis",
+    "expected_route": "lightrag",
+    "gold_answer": {
+      "top_modules": [
+        {
+          "module": "Payroll",
+          "count": 278
+        },
+        {
+          "module": "HR",
+          "count": 274
+        },
+        {
+          "module": "Documents",
+          "count": 269
+        },
+        {
+          "module": "Studio",
+          "count": 267
+        },
+        {
+          "module": "Project",
+          "count": 265
+        }
+      ]
+    }
+  },
+  {
+    "id": "TEST-0192",
+    "type": "broad_summary",
+    "hops": 0,
+    "question": "What are the most frequent root causes of defect failures across the test suite?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "defect_analysis",
+    "expected_route": "lightrag",
+    "gold_answer": {
+      "top_root_causes": [
+        {
+          "root_cause": "The manager validated the subscription renewal due to missing configuration settings.",
+          "count": 5
+        },
+        {
+          "root_cause": "The sales representative deleted the POS receipt but the system raised a validation exception.",
+          "count": 5
+        },
+        {
+          "root_cause": "The system verified the transfer after verifying the related documents.",
+          "count": 5
+        },
+        {
+          "root_cause": "The warehouse operator escalated the POS receipt due to missing configuration settings.",
+          "count": 5
+        },
+        {
+          "root_cause": "The user rejected the invoice which resulted in an AccessError.",
+          "count": 5
+        }
+      ]
+    }
+  },
+  {
+    "id": "TEST-0193",
+    "type": "broad_summary",
+    "hops": 0,
+    "question": "Which modules are experiencing the highest rate of regression bugs?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "defect_analysis",
+    "expected_route": "hybrid",
+    "gold_answer": {
+      "regression_modules": [
+        {
+          "module": "HR",
+          "count": 284
+        },
+        {
+          "module": "Payroll",
+          "count": 271
+        },
+        {
+          "module": "eCommerce",
+          "count": 264
+        },
+        {
+          "module": "Studio",
+          "count": 260
+        },
+        {
+          "module": "Documents",
+          "count": 256
+        }
+      ]
+    }
+  },
+  {
+    "id": "TEST-0194",
+    "type": "broad_summary",
+    "hops": 0,
+    "question": "What is the distribution of defect counts across different severity levels?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "general_test_analysis",
+    "expected_route": "lightrag",
+    "gold_answer": {
+      "severity_distribution": [
+        {
+          "severity": "Major",
+          "count": 2557
+        },
+        {
+          "severity": "Critical",
+          "count": 2533
+        },
+        {
+          "severity": "Minor",
+          "count": 2511
+        },
+        {
+          "severity": "Blocker",
+          "count": 2399
+        }
+      ]
+    }
+  },
+  {
+    "id": "TEST-0195",
+    "type": "broad_summary",
+    "hops": 0,
+    "question": "What is the distribution of defect counts across priority levels?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "general_test_analysis",
+    "expected_route": "lightrag",
+    "gold_answer": {
+      "priority_distribution": [
+        {
+          "priority": "P2",
+          "count": 2558
+        },
+        {
+          "priority": "P3",
+          "count": 2544
+        },
+        {
+          "priority": "P1",
+          "count": 2531
+        },
+        {
+          "priority": "P0",
+          "count": 2367
+        }
+      ]
+    }
+  },
+  {
+    "id": "TEST-0196",
+    "type": "broad_summary",
+    "hops": 0,
+    "question": "Which testing environments have recorded the highest number of failed test executions?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "failure_analysis",
+    "expected_route": "hybrid",
+    "gold_answer": {
+      "failed_environments": [
+        {
+          "env": "UAT",
+          "count": 1283
+        },
+        {
+          "env": "QA",
+          "count": 1236
+        },
+        {
+          "env": "STAGING",
+          "count": 1207
+        },
+        {
+          "env": "DEV",
+          "count": 1203
+        }
+      ]
+    }
+  },
+  {
+    "id": "TEST-0197",
+    "type": "broad_summary",
+    "hops": 0,
+    "question": "Which operating systems encountered the most test execution failures?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "failure_analysis",
+    "expected_route": "hybrid",
+    "gold_answer": {
+      "failed_os": [
+        {
+          "os": "Android",
+          "count": 1036
+        },
+        {
+          "os": "Ubuntu",
+          "count": 996
+        },
+        {
+          "os": "Windows 11",
+          "count": 995
+        },
+        {
+          "os": "macOS",
+          "count": 955
+        },
+        {
+          "os": "iOS",
+          "count": 947
+        }
+      ]
+    }
+  },
+  {
+    "id": "TEST-0198",
+    "type": "broad_summary",
+    "hops": 0,
+    "question": "Which web browsers recorded the highest number of failed test executions?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "failure_analysis",
+    "expected_route": "hybrid",
+    "gold_answer": {
+      "failed_browsers": [
+        {
+          "browser": "Edge",
+          "count": 1261
+        },
+        {
+          "browser": "Firefox",
+          "count": 1251
+        },
+        {
+          "browser": "Safari",
+          "count": 1238
+        },
+        {
+          "browser": "Chrome",
+          "count": 1179
+        }
+      ]
+    }
+  },
+  {
+    "id": "TEST-0199",
+    "type": "broad_summary",
+    "hops": 0,
+    "question": "Which QA testers have logged the highest number of test execution runs?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "general_test_analysis",
+    "expected_route": "lightrag",
+    "gold_answer": {
+      "top_testers": [
+        {
+          "tester": "Michael Williams",
+          "count": 10
+        },
+        {
+          "tester": "Michael Smith",
+          "count": 9
+        },
+        {
+          "tester": "David Johnson",
+          "count": 8
+        },
+        {
+          "tester": "Christopher Smith",
+          "count": 8
+        },
+        {
+          "tester": "Christopher Johnson",
+          "count": 8
+        }
+      ]
+    }
+  },
+  {
+    "id": "TEST-0200",
+    "type": "broad_summary",
+    "hops": 0,
+    "question": "What are the most frequent bug types reported across defects in the system?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "defect_analysis",
+    "expected_route": "lightrag",
+    "gold_answer": {
+      "top_bug_types": [
+        {
+          "bug_type": "Security",
+          "count": 2071
+        },
+        {
+          "bug_type": "Performance",
+          "count": 2035
+        },
+        {
+          "bug_type": "Functional",
+          "count": 2017
+        },
+        {
+          "bug_type": "UI/UX",
+          "count": 1949
+        },
+        {
+          "bug_type": "Integration",
+          "count": 1928
+        }
+      ]
+    }
+  },
+  {
+    "id": "TEST-0201",
+    "type": "broad_summary",
+    "hops": 0,
+    "question": "Which system components have the highest concentration of test cases?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "general_test_analysis",
+    "expected_route": "lightrag",
+    "gold_answer": {
+      "top_tc_components": [
+        {
+          "component": "Will",
+          "count": 34
+        },
+        {
+          "component": "Believe",
+          "count": 33
+        },
+        {
+          "component": "Sound",
+          "count": 33
+        },
+        {
+          "component": "Miss",
+          "count": 33
+        },
+        {
+          "component": "Side",
+          "count": 33
+        }
+      ]
+    }
+  },
+  {
+    "id": "TEST-0202",
+    "type": "broad_summary",
+    "hops": 0,
+    "question": "Which epics have the largest number of associated test cases?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "general_test_analysis",
+    "expected_route": "lightrag",
+    "gold_answer": {
+      "top_epics": [
+        {
+          "epic": "EPIC-321",
+          "count": 62
+        },
+        {
+          "epic": "EPIC-265",
+          "count": 60
+        },
+        {
+          "epic": "EPIC-280",
+          "count": 59
+        },
+        {
+          "epic": "EPIC-447",
+          "count": 57
+        },
+        {
+          "epic": "EPIC-202",
+          "count": 56
+        }
+      ]
+    }
+  },
+  {
+    "id": "TEST-0203",
+    "type": "broad_summary",
+    "hops": 0,
+    "question": "What is the breakdown of defect statuses across all logged bugs?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "defect_analysis",
+    "expected_route": "lightrag",
+    "gold_answer": {
+      "defect_status_distribution": [
+        {
+          "status": "New",
+          "count": 2072
+        },
+        {
+          "status": "Closed",
+          "count": 2022
+        },
+        {
+          "status": "In Progress",
+          "count": 2010
+        },
+        {
+          "status": "Resolved",
+          "count": 1974
+        },
+        {
+          "status": "Reopened",
+          "count": 1922
+        }
+      ]
+    }
+  },
+  {
+    "id": "TEST-0204",
+    "type": "broad_summary",
+    "hops": 0,
+    "question": "Which test automation frameworks are used most frequently across test cases?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "general_test_analysis",
+    "expected_route": "lightrag",
+    "gold_answer": {
+      "automation_frameworks": [
+        {
+          "framework": "Cypress",
+          "count": 4102
+        },
+        {
+          "framework": "Playwright",
+          "count": 4016
+        },
+        {
+          "framework": "pytest",
+          "count": 4001
+        },
+        {
+          "framework": "Selenium",
+          "count": 3968
+        },
+        {
+          "framework": NaN,
+          "count": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "TEST-0205",
+    "type": "broad_summary",
+    "hops": 0,
+    "question": "Which software builds have recorded the most defects during test runs?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "defect_analysis",
+    "expected_route": "hybrid",
+    "gold_answer": {
+      "top_build_defects": [
+        {
+          "build": "B-4530",
+          "count": 11
+        },
+        {
+          "build": "B-2438",
+          "count": 10
+        },
+        {
+          "build": "B-2234",
+          "count": 9
+        },
+        {
+          "build": "B-4442",
+          "count": 9
+        },
+        {
+          "build": "B-1407",
+          "count": 9
+        }
+      ]
+    }
+  },
+  {
+    "id": "TEST-0206",
+    "type": "broad_summary",
+    "hops": 0,
+    "question": "What is the distribution of test cases across execution frequencies (e.g. Daily, Smoke, Regression)?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "general_test_analysis",
+    "expected_route": "lightrag",
+    "gold_answer": {
+      "execution_frequencies": [
+        {
+          "frequency": "Daily",
+          "count": 5044
+        },
+        {
+          "frequency": "Release",
+          "count": 5033
+        },
+        {
+          "frequency": "Weekly",
+          "count": 4984
+        },
+        {
+          "frequency": "Ad-hoc",
+          "count": 4939
+        }
+      ]
+    }
+  },
+  {
+    "id": "TEST-0207",
+    "type": "broad_summary",
+    "hops": 0,
+    "question": "Which modules contain the highest number of automated test cases?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "general_test_analysis",
+    "expected_route": "lightrag",
+    "gold_answer": {
+      "automated_modules": [
+        {
+          "module": "Maintenance",
+          "count": 310
+        },
+        {
+          "module": "Project",
+          "count": 285
+        },
+        {
+          "module": "Quality",
+          "count": 274
+        },
+        {
+          "module": "Purchase",
+          "count": 270
+        },
+        {
+          "module": "Studio",
+          "count": 264
+        }
+      ]
+    }
+  },
+  {
+    "id": "TEST-0208",
+    "type": "broad_summary",
+    "hops": 0,
+    "question": "Which modules contain the highest number of manual test cases?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "general_test_analysis",
+    "expected_route": "lightrag",
+    "gold_answer": {
+      "manual_modules": [
+        {
+          "module": "Accounting",
+          "count": 277
+        },
+        {
+          "module": "Maintenance",
+          "count": 266
+        },
+        {
+          "module": "Project",
+          "count": 260
+        },
+        {
+          "module": "Sales",
+          "count": 258
+        },
+        {
+          "module": "HR",
+          "count": 256
+        }
+      ]
+    }
+  },
+  {
+    "id": "TEST-0209",
+    "type": "broad_summary",
+    "hops": 0,
+    "question": "What are the top fix versions targeted for resolved defects?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "defect_analysis",
+    "expected_route": "lightrag",
+    "gold_answer": {
+      "fix_versions": [
+        {
+          "version": "v15.1.9",
+          "count": 99
+        },
+        {
+          "version": "v15.4.2",
+          "count": 96
+        },
+        {
+          "version": "v15.2.7",
+          "count": 91
+        },
+        {
+          "version": "v15.2.1",
+          "count": 90
+        },
+        {
+          "version": "v17.2.2",
+          "count": 88
+        }
+      ]
+    }
+  },
+  {
+    "id": "TEST-0210",
+    "type": "broad_summary",
+    "hops": 0,
+    "question": "Which UI screens captured the highest number of error screenshots during test execution?",
+    "expected_entities": {
+      "test_case_ids": [],
+      "execution_ids": [],
+      "defect_ids": []
+    },
+    "expected_intent": "failure_analysis",
+    "expected_route": "hybrid",
+    "gold_answer": {
+      "screenshot_screens": [
+        {
+          "screen": "POS Dashboard",
+          "count": 752
+        },
+        {
+          "screen": "Accounting Dashboard",
+          "count": 735
+        },
+        {
+          "screen": "Payroll Dashboard",
+          "count": 735
+        },
+        {
+          "screen": "Maintenance Dashboard",
+          "count": 727
+        },
+        {
+          "screen": "Quality Dashboard",
+          "count": 723
+        }
+      ]
+    }
+  }
+]

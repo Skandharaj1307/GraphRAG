@@ -1,33 +1,205 @@
 import os
 import json
 import re
+import unicodedata
+import asyncio
 from pathlib import Path
-from typing import Dict, Any
+from typing import Dict, Any, List, Optional
 
-from dotenv import load_dotenv
-from openai import AsyncOpenAI
+from graph.llm_client import (
+    get_async_client,
+    get_model_for_role,
+    complete_chat,
+    tolerant_json_parse,
+    is_transient_error,
+    LLMInfraError,
+)
 
 
 # ============================================================
-# CONFIGURATION
+# ERROR CLASSIFICATION
 # ============================================================
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-# Load .env from project root
-load_dotenv(BASE_DIR / ".env")
-
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
-
-if not OPENROUTER_API_KEY:
-    raise RuntimeError(
-        "OPENROUTER_API_KEY not found in .env"
+def is_transient_error(error: Exception) -> bool:
+    """Check if an exception represents an HTTP 429 rate limit or 5xx server error."""
+    err_text = str(error).lower()
+    return (
+        "429" in err_text
+        or "rate limit" in err_text
+        or "rate_limited" in err_text
+        or "500" in err_text
+        or "502" in err_text
+        or "503" in err_text
+        or "504" in err_text
+        or "bad gateway" in err_text
+        or "service unavailable" in err_text
+        or "gateway timeout" in err_text
     )
 
-OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 
-# Free model used for query understanding
-MODEL_NAME = "openrouter/free"
+# ============================================================
+# DETERMINISTIC NORMALIZATION & ID EXTRACTION
+# ============================================================
+
+def normalize_text(text: str) -> str:
+    """Normalize text with NFKC and map Unicode dashes to ASCII hyphen."""
+    text = unicodedata.normalize("NFKC", text)
+    dash_chars = ["\u2010", "\u2011", "\u2012", "\u2013", "\u2014", "\u2015", "\u2212"]
+    for ch in dash_chars:
+        text = text.replace(ch, "-")
+    return text
+
+
+def extract_regex_ids(text: str) -> Dict[str, List[str]]:
+    """Extract deterministic IDs regardless of digit count, keeping exact casing."""
+    norm_text = normalize_text(text)
+
+    def _find(pattern: str, prefix: str) -> List[str]:
+        found = []
+        for m in re.finditer(pattern, norm_text, re.IGNORECASE):
+            val = m.group(0)
+            dash_idx = val.find("-")
+            if dash_idx != -1:
+                val = prefix.upper() + val[dash_idx:]
+            if val not in found:
+                found.append(val)
+        return found
+
+    return {
+        "defect_ids": _find(r"\bBUG-\d+\b", "BUG"),
+        "test_case_ids": _find(r"\bTC-\d+\b", "TC"),
+        "execution_ids": _find(r"\bEXEC-\d+\b", "EXEC"),
+        "screenshot_ids": _find(r"\bSCR-[A-Za-z0-9_]+-\d+\b", "SCR"),
+    }
+
+
+# ============================================================
+# VOCABULARY VALIDATOR
+# ============================================================
+
+ALIASES = {
+    "crit": "Critical",
+    "critical": "Critical",
+    "blocker": "Blocker",
+    "major": "Major",
+    "minor": "Minor",
+    "p0": "P0",
+    "p1": "P1",
+    "p2": "P2",
+    "p3": "P3",
+    "in progress": "In Progress",
+    "in-progress": "In Progress",
+    "inprogress": "In Progress",
+    "reopened": "Reopened",
+    "resolved": "Resolved",
+    "closed": "Closed",
+    "new": "New",
+    "passed": "Passed",
+    "failed": "Failed",
+    "skipped": "Skipped",
+    "blocked": "Blocked",
+    "dev": "DEV",
+    "uat": "UAT",
+    "qa": "QA",
+    "staging": "STAGING",
+    "yes": "Yes",
+    "true": "Yes",
+    "regression": "Yes",
+    "no": "No",
+    "false": "No",
+}
+
+
+def validate_and_map_filters(
+    raw_filters: Dict[str, Any],
+    vocabulary: Optional[Dict[str, List[str]]] = None,
+) -> tuple[Dict[str, Any], List[Dict[str, str]]]:
+    """Validate filter values case-insensitively against vocabulary."""
+    if not vocabulary:
+        return dict(raw_filters), []
+
+    validated = {}
+    unmapped = []
+
+    vocab_lookup = {
+        "severity": {v.lower(): v for v in vocabulary.get("severity", [])},
+        "priority": {v.lower(): v for v in vocabulary.get("priority", [])},
+        "status": {
+            **{v.lower(): v for v in vocabulary.get("status", [])},
+            **{v.lower(): v for v in vocabulary.get("execution_status", [])},
+        },
+        "bug_type": {v.lower(): v for v in vocabulary.get("bug_type", [])},
+        "environment": {v.lower(): v for v in vocabulary.get("environments", [])},
+        "module": {v.lower(): v for v in vocabulary.get("modules", [])},
+        "regression": {"yes": "Yes", "no": "No", "true": "Yes", "false": "No"},
+    }
+
+    for k, raw_v in raw_filters.items():
+        if raw_v is None:
+            continue
+
+        # Map key aliases
+        if k in ("type", "defect_type"):
+            if str(raw_v).lower() in ("regression", "yes", "regression bugs", "regression bug"):
+                k = "regression"
+                raw_v = "Yes"
+            else:
+                k = "bug_type"
+
+        target_vocab = vocab_lookup.get(k)
+
+        items_to_check = []
+        if isinstance(raw_v, (list, tuple, set)):
+            items_to_check = [str(x).strip() for x in raw_v if x is not None and str(x).strip()]
+        else:
+            v_str = str(raw_v).strip()
+            if target_vocab is not None and ("," in v_str or " or " in v_str):
+                parts = [p.strip() for p in re.split(r",|\bor\b", v_str) if p.strip()]
+                if len(parts) > 1 and any(
+                    p.lower() in target_vocab or ALIASES.get(p.lower(), p).lower() in target_vocab
+                    for p in parts
+                ):
+                    items_to_check = parts
+                else:
+                    items_to_check = [v_str]
+            else:
+                items_to_check = [v_str]
+
+        if target_vocab is not None:
+            valid_items = []
+            unmapped_items = []
+            for item in items_to_check:
+                item_lower = item.lower()
+                aliased_v = ALIASES.get(item_lower, item)
+                aliased_lower = aliased_v.lower()
+
+                if aliased_lower in target_vocab:
+                    valid_items.append(target_vocab[aliased_lower])
+                elif item_lower in target_vocab:
+                    valid_items.append(target_vocab[item_lower])
+                else:
+                    unmapped_items.append(item)
+
+            if valid_items:
+                if len(valid_items) == 1 and not isinstance(raw_v, (list, tuple, set)) and len(items_to_check) == 1:
+                    validated[k] = valid_items[0]
+                else:
+                    validated[k] = list(dict.fromkeys(valid_items))
+
+            if unmapped_items:
+                unmapped.append({
+                    "key": k,
+                    "value": ", ".join(unmapped_items),
+                    "reason": f"Value '{', '.join(unmapped_items)}' does not exist in {k} vocabulary",
+                })
+        else:
+            # Low-cardinality or direct property (e.g. build_number, tester)
+            if isinstance(raw_v, (list, tuple, set)):
+                validated[k] = [str(x).strip() for x in raw_v if x is not None]
+            else:
+                validated[k] = str(raw_v).strip()
+
+    return validated, unmapped
 
 
 # ============================================================
@@ -36,38 +208,43 @@ MODEL_NAME = "openrouter/free"
 
 class QueryUnderstanding:
 
-    def __init__(self):
-        self.client = AsyncOpenAI(
-            api_key=OPENROUTER_API_KEY,
-            base_url=OPENROUTER_BASE_URL,
-        )
+    def __init__(self, client: Optional[Any] = None, model: Optional[str] = None):
+        self.model = model or get_model_for_role("router")
+        self.client = client or get_async_client()
+        self._vocab = None
 
-    # --------------------------------------------------------
-    # SYSTEM PROMPT
-    # --------------------------------------------------------
+    def _get_vocab(self) -> Optional[Dict[str, List[str]]]:
+        if self._vocab is None:
+            try:
+                from graph.graph_retriever import Neo4jGraphRetriever
+                retriever = Neo4jGraphRetriever()
+                try:
+                    self._vocab = retriever.get_vocabulary()
+                finally:
+                    retriever.close()
+            except Exception:
+                self._vocab = {}
+        return self._vocab
 
     def _build_system_prompt(self) -> str:
-
         return """
-You are a Query Understanding module for a Test Management
-Graph RAG system.
+You are a Query Understanding module for a Test Management Graph RAG system.
+Your job is ONLY to analyze the user's query and return valid JSON.
 
-Your job is ONLY to analyze the user's query.
+Do NOT answer the question. Do NOT retrieve data. Do NOT invent IDs or facts.
 
-Do NOT answer the user's question.
-Do NOT retrieve data.
-Do NOT invent IDs or facts.
-
-Return ONLY valid JSON.
-
-The JSON must have exactly this structure:
-
+Return ONLY valid JSON with this exact structure:
 {
-    "intent": "",
+    "intent": "testcase_lookup | execution_lookup | defect_lookup | testcase_execution_analysis | defect_analysis | failure_analysis | screenshot_lookup | semantic_search | general_test_analysis",
+    "target_entity": "defect | test_case | execution | screenshot | requirement | module | unknown",
+    "operation": "lookup | list | count | group_by | semantic",
+    "group_by_field": null,
+    "limit": null,
     "entities": {
         "test_case_ids": [],
         "execution_ids": [],
-        "defect_ids": []
+        "defect_ids": [],
+        "screenshot_ids": []
     },
     "filters": {},
     "low_level_keywords": [],
@@ -75,326 +252,338 @@ The JSON must have exactly this structure:
 }
 
 ------------------------------------------------------------
-INTENT
-------------------------------------------------------------
-
-Choose the most appropriate intent:
-
-- testcase_lookup
-- execution_lookup
-- defect_lookup
-- testcase_execution_analysis
-- defect_analysis
-- failure_analysis
-- screenshot_lookup
-- semantic_search
-- general_test_analysis
+OPERATIONS:
+- lookup: names an ID (e.g. "BUG-000176", "TC-000001", "EXEC-003016")
+- list: asks to list or show matching items (e.g. "show all Critical defects")
+- count: asks how many items match (e.g. "how many Failed executions in UAT")
+- group_by: asks to group, aggregate, or top N by an attribute (e.g. "defects by severity", "top modules by defects")
+- semantic: describes an issue in natural language without an exact ID or precise attribute (e.g. "login timeout crash")
 
 ------------------------------------------------------------
-ENTITY EXTRACTION
-------------------------------------------------------------
-
-Extract explicit IDs from the query.
-
-Test case IDs:
-TC-XXXXXX
-
-Execution IDs:
-EXEC-XXXXXX
-
-Defect IDs:
-BUG-XXXXXX
-
-Only include IDs that actually appear in the query.
+TARGET ENTITY:
+Identify primary entity type: defect, test_case, execution, screenshot, requirement, module, or unknown.
 
 ------------------------------------------------------------
-FILTERS
+ENVIRONMENTS:
+Real environments are DEV, UAT, QA, STAGING. (PROD does NOT exist).
+
 ------------------------------------------------------------
+EXAMPLES:
 
-Extract explicit structured filters when present.
-
-Possible filter fields include:
-
-- status
-- severity
-- priority
-- module
-- environment
-- browser
-- operating_system
-- build_number
-- tester
-- developer
-- assigned_to
-- automation_status
-- release
-- risk
-- regression
-
-Example:
-
-"critical defects in production"
-
-should produce:
-
+Example 1 (Lookup):
+Query: "Give me details about defect BUG-000176."
+Result:
 {
-    "severity": "Critical",
-    "environment": "PROD"
+    "intent": "defect_lookup",
+    "target_entity": "defect",
+    "operation": "lookup",
+    "group_by_field": null,
+    "limit": null,
+    "entities": {
+        "test_case_ids": [],
+        "execution_ids": [],
+        "defect_ids": ["BUG-000176"],
+        "screenshot_ids": []
+    },
+    "filters": {},
+    "low_level_keywords": ["BUG-000176"],
+    "high_level_keywords": ["defect details"]
 }
 
-Do NOT invent filters that are not explicitly stated.
+Example 2 (List with filters):
+Query: "Show all Critical defects in UAT."
+Result:
+{
+    "intent": "defect_lookup",
+    "target_entity": "defect",
+    "operation": "list",
+    "group_by_field": null,
+    "limit": null,
+    "entities": {
+        "test_case_ids": [],
+        "execution_ids": [],
+        "defect_ids": [],
+        "screenshot_ids": []
+    },
+    "filters": {
+        "severity": "Critical",
+        "environment": "UAT"
+    },
+    "low_level_keywords": ["Critical", "UAT"],
+    "high_level_keywords": ["critical defects in UAT"]
+}
 
-------------------------------------------------------------
-LOW-LEVEL KEYWORDS
-------------------------------------------------------------
+Example 3 (Count with filters):
+Query: "How many Failed executions in QA?"
+Result:
+{
+    "intent": "failure_analysis",
+    "target_entity": "execution",
+    "operation": "count",
+    "group_by_field": null,
+    "limit": null,
+    "entities": {
+        "test_case_ids": [],
+        "execution_ids": [],
+        "defect_ids": [],
+        "screenshot_ids": []
+    },
+    "filters": {
+        "status": "Failed",
+        "environment": "QA"
+    },
+    "low_level_keywords": ["Failed", "QA"],
+    "high_level_keywords": ["failed executions in QA"]
+}
 
-These should identify specific entities, IDs, technical terms,
-or concrete concepts useful for retrieval.
+Example 4 (Group by):
+Query: "Defects grouped by severity"
+Result:
+{
+    "intent": "defect_analysis",
+    "target_entity": "defect",
+    "operation": "group_by",
+    "group_by_field": "severity",
+    "limit": null,
+    "entities": {
+        "test_case_ids": [],
+        "execution_ids": [],
+        "defect_ids": [],
+        "screenshot_ids": []
+    },
+    "filters": {},
+    "low_level_keywords": ["severity"],
+    "high_level_keywords": ["defects grouped by severity"]
+}
 
-Examples:
-
-TC-000001
-EXEC-003016
-BUG-000176
-permission error
-validation exception
-Safari
-POS
-
-------------------------------------------------------------
-HIGH-LEVEL KEYWORDS
-------------------------------------------------------------
-
-These should describe the broader semantic topic of the query.
-
-Examples:
-
-defects found during test execution
-test execution failure
-permission related failures
-production defects
-test case performance
-
-------------------------------------------------------------
-IMPORTANT
-------------------------------------------------------------
-
-Preserve IDs exactly.
-
-Do not create IDs.
-
-Do not answer the question.
-
-Return JSON only.
-"""
-
-
-    # --------------------------------------------------------
-    # JSON CLEANING
-    # --------------------------------------------------------
+Example 5 (Semantic):
+Query: "Users experience timeout crash during payment checkout"
+Result:
+{
+    "intent": "semantic_search",
+    "target_entity": "defect",
+    "operation": "semantic",
+    "group_by_field": null,
+    "limit": null,
+    "entities": {
+        "test_case_ids": [],
+        "execution_ids": [],
+        "defect_ids": [],
+        "screenshot_ids": []
+    },
+    "filters": {},
+    "low_level_keywords": ["timeout", "crash", "payment", "checkout"],
+    "high_level_keywords": ["payment checkout timeout crash"]
+}
+""".strip()
 
     def _extract_json(self, text: str) -> Dict[str, Any]:
+        return tolerant_json_parse(text)
 
-        text = text.strip()
+    def _validate_result(self, result: Dict[str, Any]) -> Dict[str, Any]:
+        if not isinstance(result, dict):
+            result = {}
+        valid_targets = {"defect", "test_case", "execution", "screenshot", "requirement", "module", "unknown"}
+        valid_ops = {"lookup", "list", "count", "group_by", "semantic"}
 
-        # Remove markdown code fences if the model adds them
-        text = re.sub(r"^```json\s*", "", text)
-        text = re.sub(r"^```\s*", "", text)
-        text = re.sub(r"\s*```$", "", text)
+        if result.get("target_entity") not in valid_targets:
+            result["target_entity"] = "unknown"
+        if result.get("operation") not in valid_ops:
+            result["operation"] = "semantic"
 
-        text = text.strip()
+        if "entities" not in result or not isinstance(result["entities"], dict):
+            result["entities"] = {}
+        for k in ["test_case_ids", "execution_ids", "defect_ids", "screenshot_ids"]:
+            if k not in result["entities"] or not isinstance(result["entities"][k], list):
+                result["entities"][k] = []
 
-        try:
-            return json.loads(text)
-
-        except json.JSONDecodeError:
-
-            # Try to locate the JSON object
-            start = text.find("{")
-            end = text.rfind("}")
-
-            if start != -1 and end != -1:
-                candidate = text[start:end + 1]
-
-                try:
-                    return json.loads(candidate)
-
-                except json.JSONDecodeError:
-                    pass
-
-        raise ValueError(
-            f"Query Understanding returned invalid JSON:\n{text}"
-        )
-
-
-    # --------------------------------------------------------
-    # VALIDATION
-    # --------------------------------------------------------
-
-    def _validate_result(
-        self,
-        result: Dict[str, Any]
-    ) -> Dict[str, Any]:
-
-        required_top_level = [
-            "intent",
-            "entities",
-            "filters",
-            "low_level_keywords",
-            "high_level_keywords",
-        ]
-
-        for field in required_top_level:
-
-            if field not in result:
-                raise ValueError(
-                    f"Missing required field: {field}"
-                )
-
-        entities = result["entities"]
-
-        required_entities = [
-            "test_case_ids",
-            "execution_ids",
-            "defect_ids",
-        ]
-
-        for field in required_entities:
-
-            if field not in entities:
-                raise ValueError(
-                    f"Missing entity field: {field}"
-                )
-
-            if not isinstance(entities[field], list):
-                raise ValueError(
-                    f"{field} must be a list"
-                )
-
-        if not isinstance(result["filters"], dict):
-            raise ValueError(
-                "filters must be a dictionary"
-            )
-
-        if not isinstance(result["low_level_keywords"], list):
-            raise ValueError(
-                "low_level_keywords must be a list"
-            )
-
-        if not isinstance(result["high_level_keywords"], list):
-            raise ValueError(
-                "high_level_keywords must be a list"
-            )
+        if not isinstance(result.get("filters"), dict):
+            result["filters"] = {}
+        if not isinstance(result.get("low_level_keywords"), list):
+            result["low_level_keywords"] = []
+        if not isinstance(result.get("high_level_keywords"), list):
+            result["high_level_keywords"] = []
 
         return result
 
+    def _fallback_parse(self, query: str) -> Dict[str, Any]:
+        """Deterministic keyword-based fallback if LLM is unavailable or fails."""
+        regex_ids = extract_regex_ids(query)
+        q_lower = query.lower()
 
-    # --------------------------------------------------------
-    # ANALYZE QUERY
-    # --------------------------------------------------------
+        # Target entity
+        if regex_ids["defect_ids"]:
+            target_entity = "defect"
+        elif regex_ids["test_case_ids"]:
+            target_entity = "test_case"
+        elif regex_ids["execution_ids"]:
+            target_entity = "execution"
+        elif regex_ids["screenshot_ids"]:
+            target_entity = "screenshot"
+        elif any(w in q_lower for w in ["execution", "executions"]):
+            target_entity = "execution"
+        elif any(w in q_lower for w in ["test case", "testcase", "test cases", "testcases"]):
+            target_entity = "test_case"
+        elif any(w in q_lower for w in ["screenshot", "screenshots", "image"]):
+            target_entity = "screenshot"
+        elif any(w in q_lower for w in ["defect", "defects", "bug", "bugs", "issue", "crash", "error", "failure", "broken", "problem"]):
+            target_entity = "defect"
+        else:
+            target_entity = "unknown"
+
+        # Operation
+        has_any_id = any(bool(v) for v in regex_ids.values())
+        if has_any_id:
+            op = "lookup"
+        elif any(w in q_lower for w in ["by severity", "by status", "by module", "by priority", "grouped by", "top "]):
+            op = "group_by"
+        elif any(re.search(r"\b" + re.escape(w) + r"\b", q_lower) for w in ["how many", "count of", "total count", "number of", "count"]):
+            op = "count"
+        elif any(re.search(r"\b" + re.escape(w) + r"\b", q_lower) for w in ["show", "list", "filter"]):
+            op = "list"
+        else:
+            op = "semantic"
+
+        group_by_field = None
+        if op == "group_by":
+            for f in ["severity", "module", "status", "priority", "bug_type", "environment"]:
+                if f in q_lower:
+                    group_by_field = f
+                    break
+
+        intent = "semantic_search"
+        if op in ("lookup", "list"):
+            if target_entity == "defect":
+                intent = "defect_lookup"
+            elif target_entity == "test_case":
+                intent = "testcase_lookup"
+            elif target_entity == "execution":
+                intent = "execution_lookup"
+            elif target_entity == "screenshot":
+                intent = "screenshot_lookup"
+        elif op in ("group_by", "count"):
+            if target_entity == "defect":
+                intent = "defect_analysis"
+            elif target_entity == "execution":
+                intent = "failure_analysis"
+            else:
+                intent = "general_test_analysis"
+
+        # Basic filter extraction
+        raw_filters = {}
+        for sev in ["critical", "blocker", "major", "minor"]:
+            if sev in q_lower:
+                raw_filters["severity"] = sev.capitalize()
+        for env in ["dev", "uat", "qa", "staging"]:
+            if f"in {env}" in q_lower or f" {env} " in q_lower:
+                raw_filters["environment"] = env.upper()
+
+        vocab = self._get_vocab()
+        for mod in vocab.get("modules", []):
+            if mod.lower() in q_lower:
+                raw_filters["module"] = mod
+                break
+        for st in vocab.get("statuses", []):
+            if st.lower() in q_lower:
+                raw_filters["status"] = st
+                break
+
+        validated_filters, unmapped = validate_and_map_filters(raw_filters, vocab)
+
+        words = [w for w in re.findall(r"\b\w+\b", q_lower) if len(w) > 3]
+
+        return {
+            "intent": intent,
+            "target_entity": target_entity,
+            "operation": op,
+            "group_by_field": group_by_field,
+            "limit": None,
+            "entities": regex_ids,
+            "filters": validated_filters,
+            "unmapped_filters": unmapped,
+            "low_level_keywords": words[:5],
+            "high_level_keywords": [query.strip()],
+            "understanding_fallback": True,
+        }
 
     async def analyze(
         self,
-        query: str
+        query: str,
+        max_retries: int = 3,
+        base_backoff: float = 2.0
     ) -> Dict[str, Any]:
-
         if not query or not query.strip():
             raise ValueError("Query cannot be empty.")
 
-        response = await self.client.chat.completions.create(
-            model=MODEL_NAME,
-            messages=[
-                {
-                    "role": "system",
-                    "content": self._build_system_prompt(),
-                },
-                {
-                    "role": "user",
-                    "content": query,
-                },
-            ],
-            temperature=0,
-        )
+        # 1. Deterministic regex extraction (always runs and augments)
+        regex_ids = extract_regex_ids(query)
 
-        content = response.choices[0].message.content
-
-        if not content:
-            raise ValueError(
-                "Query Understanding LLM returned empty response."
-            )
-
-        result = self._extract_json(content)
-
-        return self._validate_result(result)
-
-
-# ============================================================
-# TEST
-# ============================================================
-
-async def main():
-
-    print("=" * 60)
-    print("QUERY UNDERSTANDING TEST")
-    print("=" * 60)
-
-    query_understanding = QueryUnderstanding()
-
-    test_queries = [
-
-        # TestCase → Execution → Defect
-        "Which defects were found in the execution of test case TC-000001?",
-
-        # Specific defect
-        "Give me details about defect BUG-000176.",
-
-        # Execution failure
-        "Why did execution EXEC-003016 fail?",
-
-        # Structured filters
-        "Show me critical defects in PROD.",
-
-        # Semantic query
-        "Find failures related to permission errors.",
-
-    ]
-
-    for index, query in enumerate(test_queries, start=1):
-
-        print()
-        print("-" * 60)
-        print(f"TEST QUERY {index}")
-        print("-" * 60)
-
-        print("Query:")
-        print(query)
-
+        # 2. Call LLM with retry & exponential backoff on HTTP 429 / 5xx / timeouts
+        messages = [
+            {"role": "system", "content": self._build_system_prompt()},
+            {"role": "user", "content": query},
+        ]
         try:
-
-            result = await query_understanding.analyze(query)
-
-            print()
-            print("Query Understanding Result:")
-            print(json.dumps(
-                result,
-                indent=4,
-                ensure_ascii=False
-            ))
-
+            content = await complete_chat(
+                messages=messages,
+                role="router",
+                temperature=0,
+                max_retries=max_retries,
+                base_backoff=base_backoff,
+                client=self.client,
+                model=self.model,
+            )
+            parsed = self._extract_json(content)
+            result = self._validate_result(parsed)
+        except LLMInfraError as e:
+            print(
+                f"[QUERY UNDERSTANDING FAILURE] Infrastructure error persisted after {max_retries} attempts: {e}"
+            )
+            return {
+                "status": "infra_error",
+                "intent": "infra_error",
+                "target_entity": "unknown",
+                "operation": "unknown",
+                "group_by_field": None,
+                "limit": None,
+                "entities": regex_ids,
+                "filters": {},
+                "unmapped_filters": [],
+                "low_level_keywords": [],
+                "high_level_keywords": [query.strip()],
+                "understanding_fallback": False,
+                "error": f"Infrastructure error after {max_retries} attempts: {e}",
+            }
         except Exception as e:
+            # Non-transient parsing/extraction error: use fallback parse
+            print(f"[QUERY UNDERSTANDING WARNING] Non-transient error: {e}. Falling back to rule-based parse.")
+            return self._fallback_parse(query)
 
-            print()
-            print("ERROR:")
-            print(e)
+        if result is None:
+            return self._fallback_parse(query)
 
-    print()
-    print("=" * 60)
-    print("✓ QUERY UNDERSTANDING TEST COMPLETED")
-    print("=" * 60)
+        # 2. Augment and override entities with deterministic regex
+        for k, v in regex_ids.items():
+            combined = list(dict.fromkeys(v + result["entities"].get(k, [])))
+            result["entities"][k] = combined
 
+        # If IDs exist, enforce operation=lookup
+        if any(bool(result["entities"][k]) for k in ["defect_ids", "test_case_ids", "execution_ids", "screenshot_ids"]):
+            result["operation"] = "lookup"
+            if result["entities"]["defect_ids"] and result["target_entity"] == "unknown":
+                result["target_entity"] = "defect"
+            elif result["entities"]["test_case_ids"] and result["target_entity"] == "unknown":
+                result["target_entity"] = "test_case"
+            elif result["entities"]["execution_ids"] and result["target_entity"] == "unknown":
+                result["target_entity"] = "execution"
+            elif result["entities"]["screenshot_ids"] and result["target_entity"] == "unknown":
+                result["target_entity"] = "screenshot"
 
-if __name__ == "__main__":
+        # 3. Vocabulary validation
+        vocab = self._get_vocab()
+        validated_filters, unmapped = validate_and_map_filters(result["filters"], vocab)
+        result["filters"] = validated_filters
+        result["unmapped_filters"] = unmapped
+        result["understanding_fallback"] = False
 
-    import asyncio
-
-    asyncio.run(main())
+        return result

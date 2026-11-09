@@ -1,0 +1,14 @@
+{
+  "timestamp": "20261106_144250",
+  "testset_path": "E:\\GraphRAG-1\\graph\\testset.json",
+  "testset_hash": "dce8f0d48472923f714bad672301db55",
+  "judge_mode": "none",
+  "total_cases_evaluated": 27,
+  "cases_executed": 27,
+  "limit": null,
+  "per_type": 3,
+  "concurrency": 1,
+  "types_filter": null,
+  "min_request_interval_sec": 3.1,
+  "retrieval_min_field_recall": 1.0
+}

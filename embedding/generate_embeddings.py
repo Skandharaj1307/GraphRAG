@@ -5,7 +5,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from .config import TESTCASES_FILE, DEFECTS_FILE
+from .config import TESTCASES_FILE, DEFECTS_FILE, BASE_DIR
 from .text_builder import (
     build_testcase_text,
     build_defect_text,
@@ -115,8 +115,26 @@ def generate_testcase_embeddings(embedder, testcases):
 def generate_defect_embeddings(embedder, defects):
 
     print("\n" + "=" * 60)
-    print("GENERATING DEFECT EMBEDDINGS")
+    print("GENERATING DEFECT EMBEDDINGS (ENRICHED)")
     print("=" * 60)
+
+    # Enrich defects with test_steps and execution_notes if available
+    exec_file = BASE_DIR / "dataset" / "structured" / "test_execution.csv"
+    if "test_steps" not in defects.columns and TESTCASES_FILE.exists():
+        try:
+            tc_df = pd.read_csv(TESTCASES_FILE, usecols=["test_case_id", "test_steps"])
+            defects = defects.merge(tc_df, left_on="linked_test_case", right_on="test_case_id", how="left")
+            print("✓ Enriched with linked test steps")
+        except Exception as e:
+            print(f"Note: Could not join testcases: {e}")
+
+    if "execution_notes" not in defects.columns and exec_file.exists():
+        try:
+            ex_df = pd.read_csv(exec_file, usecols=["execution_id", "execution_notes"])
+            defects = defects.merge(ex_df, left_on="linked_execution", right_on="execution_id", how="left")
+            print("✓ Enriched with linked execution notes / error signatures")
+        except Exception as e:
+            print(f"Note: Could not join executions: {e}")
 
     texts = [
         build_defect_text(row)

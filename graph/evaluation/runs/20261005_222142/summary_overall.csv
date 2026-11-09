@@ -1,0 +1,14 @@
+Metric,Value
+Total Test Cases,5
+Extraction Exact Match,80.0%
+Intent Accuracy (Raw Strict),60.0%
+Intent Accuracy (Aliased),80.0%
+Routing Accuracy,80.0%
+Retrieval Field Recall,80.0%
+Empty Retrieval Rate,20.0%
+Answer Correctness,60.0%
+Unanswerable Pass Rate,N/A
+Faithfulness (Judge),N/A
+Completeness (Judge),N/A
+Latency p50,21.14s
+Latency p95,29.29s

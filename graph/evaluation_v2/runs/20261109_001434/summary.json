@@ -1,0 +1,49 @@
+{
+  "run_timestamp": "20261109_001434",
+  "mode": "retrieval_only",
+  "total_cases": 21,
+  "valid_cases": 21,
+  "infra_errors": 0,
+  "pipeline_errors": 0,
+  "latency_p50": 0.043,
+  "latency_p95": 0.231,
+  "overall_metrics": {
+    "agg_filters_match": 0.9048,
+    "agg_order_match": 0.8571,
+    "agg_pairs_match": 0.7619,
+    "aggregation_exact": 0.7619,
+    "context_chars": 15810.0476,
+    "context_tokens_est": 3952.1429,
+    "field_recall": 0.9524,
+    "node_precision": 1.0,
+    "node_recall": 1.0
+  },
+  "by_type": {
+    "aggregation": {
+      "count": 21,
+      "agg_filters_match": 0.9048,
+      "agg_order_match": 0.8571,
+      "agg_pairs_match": 0.7619,
+      "aggregation_exact": 0.7619,
+      "context_chars": 15810.0476,
+      "context_tokens_est": 3952.1429,
+      "field_recall": 0.9524,
+      "node_precision": 1.0,
+      "node_recall": 1.0
+    }
+  },
+  "by_split": {
+    "dev": {
+      "count": 21,
+      "agg_filters_match": 0.9048,
+      "agg_order_match": 0.8571,
+      "agg_pairs_match": 0.7619,
+      "aggregation_exact": 0.7619,
+      "context_chars": 15810.0476,
+      "context_tokens_est": 3952.1429,
+      "field_recall": 0.9524,
+      "node_precision": 1.0,
+      "node_recall": 1.0
+    }
+  }
+}

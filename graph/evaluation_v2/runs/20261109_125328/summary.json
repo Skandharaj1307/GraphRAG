@@ -1,0 +1,13 @@
+{
+  "run_timestamp": "20261109_125328",
+  "mode": "full",
+  "total_cases": 1,
+  "valid_cases": 0,
+  "infra_errors": 0,
+  "pipeline_errors": 1,
+  "latency_p50": 0.0,
+  "latency_p95": 0.0,
+  "overall_metrics": {},
+  "by_type": {},
+  "by_split": {}
+}

@@ -1,25 +1,94 @@
 import os
+import re
+from typing import Optional, Any
 
-from dotenv import load_dotenv
-from openai import AsyncOpenAI
+from graph.llm_client import (
+    LLM_BASE_URL,
+    LLM_API_KEY,
+    get_async_client,
+    get_model_for_role,
+    get_base_url_host,
+    complete_chat,
+    LLMInfraError,
+)
 
-
-load_dotenv()
+FINAL_LLM_MODEL = get_model_for_role("answer")
+OPENROUTER_BASE_URL = LLM_BASE_URL
+OPENROUTER_API_KEY = LLM_API_KEY
 
 
 # ============================================================
-# OPENROUTER FINAL LLM CONFIGURATION
+# OUTPUT SANITIZER
 # ============================================================
 
-OPENROUTER_API_KEY = os.getenv(
-    "OPENROUTER_API_KEY"
-)
+def sanitize_llm_output(text: str) -> str:
+    """
+    Sanitize LLM output by removing:
+    1. <think>...</think> blocks (including unclosed <think> if truncated).
+    2. Leading phrases like "Here's a thinking process:", "Thinking process:", etc.
+       If followed by step-by-step thinking and an answer section, extract the answer section.
+    3. Leading conversational greetings/preambles like "Hello!", "Sure, here is the answer:".
+    """
+    if not text:
+        return ""
 
-FINAL_LLM_MODEL = "openrouter/free"
+    cleaned = str(text).strip()
 
-OPENROUTER_BASE_URL = (
-    "https://openrouter.ai/api/v1"
-)
+    # 1. Strip complete <think>...</think> blocks (multiline)
+    cleaned = re.sub(r"<think>.*?</think>", "", cleaned, flags=re.DOTALL | re.IGNORECASE).strip()
+    # Strip unclosed <think> if response was truncated
+    cleaned = re.sub(r"<think>.*$", "", cleaned, flags=re.DOTALL | re.IGNORECASE).strip()
+
+    # 2. Check for leading thinking process blocks
+    thinking_lead_pattern = re.compile(
+        r"^\s*(?:Here(?:'s|\s+is)\s+(?:a\s+)?thinking\s+process:?|"
+        r"Thinking\s+[Pp]rocess:?|"
+        r"Let(?:'s|\s+us)\s+analyze\s+(?:the\s+)?(?:user\s+)?question:?|"
+        r"Chain\s+of\s+[Tt]hought:?|"
+        r"Internal\s+[Rr]easoning:?|"
+        r"Step-by-step\s+reasoning:?)",
+        re.IGNORECASE
+    )
+
+    if thinking_lead_pattern.search(cleaned):
+        # Look for transition markers where the actual final answer begins
+        answer_markers = [
+            r"\n\s*(?:\*\*)?(?:Final\s+)?Answer:?(?:\*\*)?\s*",
+            r"\n\s*(?:\*\*)?Conclusion:?(?:\*\*)?\s*",
+            r"\n\s*(?:\*\*)?Summary:?(?:\*\*)?\s*",
+            r"\n\s*(?:Based on (?:the|the provided|the retrieved|Neo4j))",
+            r"\n\s*(?:According to (?:the|the provided|the retrieved|Neo4j))",
+            r"\n\s*(?:The test case|Test case|Defect|Execution|The defect)",
+        ]
+        split_found = False
+        for marker in answer_markers:
+            m = re.search(marker, cleaned, re.IGNORECASE)
+            if m:
+                if m.start() > 15:
+                    candidate = cleaned[m.start():].strip()
+                    candidate = re.sub(
+                        r"^(?:\*\*)?(?:Final\s+)?Answer:?(?:\*\*)?\s*",
+                        "",
+                        candidate,
+                        flags=re.IGNORECASE
+                    ).strip()
+                    if candidate:
+                        cleaned = candidate
+                        split_found = True
+                        break
+        if not split_found:
+            cleaned = thinking_lead_pattern.sub("", cleaned).strip()
+
+    # 3. Strip leading generic greetings/preambles if present
+    preamble_pattern = re.compile(
+        r"^(?:(?:Hello|Hi|Greetings|Hey)[!.,]?\s*)*"
+        r"(?:(?:Sure(?: thing)?|Certainly|Of course)[!.,]?\s*)*"
+        r"(?:Here (?:is|are) (?:the |what (?:I|we) found |your )?(?:answer|details|results|requested information)[!.,:]?\s*)*",
+        re.IGNORECASE
+    )
+    cleaned = preamble_pattern.sub("", cleaned).strip()
+
+    return cleaned
 
 
 # ============================================================
@@ -27,187 +96,42 @@ OPENROUTER_BASE_URL = (
 # ============================================================
 
 class FinalLLM:
+    """Final answer LLM client using unified llm_client configuration."""
 
-    """
-    Final answer LLM client.
+    def __init__(self, client: Optional[Any] = None, model: Optional[str] = None):
+        self.model = model or FINAL_LLM_MODEL
+        self.client = client or get_async_client()
+        self.base_url = LLM_BASE_URL
 
-    Provider:
-        OpenRouter
-
-    Model:
-        openrouter/free
-
-    This class replaces the previous direct Mistral API
-    client while keeping the same interface used by the
-    rest of the GraphRAG pipeline.
-    """
-
-    def __init__(self):
-
-        if not OPENROUTER_API_KEY:
-
-            raise ValueError(
-                "OPENROUTER_API_KEY is not configured. "
-                "Please check your .env file."
-            )
-
-        self.client = AsyncOpenAI(
-            api_key=OPENROUTER_API_KEY,
-            base_url=OPENROUTER_BASE_URL
-        )
-
-        self.model = FINAL_LLM_MODEL
-
-        print(
-            f"✓ Final LLM configured: "
-            f"{self.model}"
-        )
-
-        print(
-            "✓ Provider: OpenRouter"
-        )
-
-        print(
-            f"✓ API endpoint: "
-            f"{OPENROUTER_BASE_URL}"
-        )
-
-    # ========================================================
-    # CONNECTION TEST
-    # ========================================================
+        print(f"✓ Final LLM configured: {self.model}")
+        print(f"✓ API endpoint: {get_base_url_host(self.base_url)}")
 
     async def test_connection(self):
-
-        if not OPENROUTER_API_KEY:
-
-            raise ValueError(
-                "OPENROUTER_API_KEY is not configured."
-            )
-
-        print(
-            "✓ OpenRouter client configuration is valid."
-        )
-
-        print(
-            "No inference request was sent."
-        )
-
+        print("✓ LLM client configuration is valid.")
         return True
 
-    # ========================================================
-    # GENERATE
-    # ========================================================
-
-    async def generate(
-        self,
-        messages,
-        max_tokens=2000
-    ):
-
+    async def generate(self, messages, max_tokens=2000):
         if not messages:
-
-            raise ValueError(
-                "Messages cannot be empty."
-            )
+            raise ValueError("Messages cannot be empty.")
 
         try:
-
-            response = (
-                await self.client.chat.completions.create(
-                    model=self.model,
-                    messages=messages,
-                    max_tokens=max_tokens
-                )
+            content = await complete_chat(
+                messages=messages,
+                role="answer",
+                max_tokens=max_tokens,
+                client=self.client,
+                model=self.model,
             )
-
+            return sanitize_llm_output(str(content))
+        except LLMInfraError as error:
+            raise RuntimeError(
+                f"LLM API rate limit or infrastructure failure (HTTP 429/5xx/timeout):\n{error}"
+            ) from error
         except Exception as error:
+            raise RuntimeError(f"LLM API request failed:\n{error}") from error
 
-            error_text = str(error)
-
-            # ------------------------------------------------
-            # Rate-limit handling
-            # ------------------------------------------------
-
-            if (
-                "429" in error_text
-                or
-                "rate limit" in error_text.lower()
-                or
-                "rate_limited" in error_text.lower()
-            ):
-
-                raise RuntimeError(
-                    "OpenRouter API rate limit reached "
-                    "(HTTP 429).\n"
-                    "The GraphRAG pipeline and prompt "
-                    "formatting completed successfully, "
-                    "but OpenRouter rejected the inference "
-                    "request because the API key/model is "
-                    "currently rate-limited.\n"
-                    "Please wait before retrying."
-                ) from None
-
-            # ------------------------------------------------
-            # Other API errors
-            # ------------------------------------------------
-
-            raise RuntimeError(
-                f"OpenRouter API request failed:\n"
-                f"{error_text}"
-            ) from None
-
-        # ====================================================
-        # RESPONSE VALIDATION
-        # ====================================================
-
-        if not response:
-
-            raise RuntimeError(
-                "OpenRouter returned an empty response."
-            )
-
-        if not response.choices:
-
-            raise RuntimeError(
-                "OpenRouter response contains no choices."
-            )
-
-        message = (
-            response.choices[0].message
-        )
-
-        if message is None:
-
-            raise RuntimeError(
-                "OpenRouter returned an empty message."
-            )
-
-        content = message.content
-
-        if content is None:
-
-            raise RuntimeError(
-                "OpenRouter returned empty content."
-            )
-
-        return str(
-            content
-        ).strip()
-
-    # ========================================================
-    # GENERATE TEXT
-    # ========================================================
-
-    async def generate_text(
-        self,
-        messages,
-        max_tokens=2000
-    ):
-
-        return await self.generate(
-            messages=messages,
-            max_tokens=max_tokens
-        )
+    async def generate_text(self, messages, max_tokens=2000):
+        return await self.generate(messages=messages, max_tokens=max_tokens)
 
     # ========================================================
     # CLOSE

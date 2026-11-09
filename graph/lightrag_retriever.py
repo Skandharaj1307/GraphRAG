@@ -28,24 +28,12 @@ EMBEDDING_MODEL = "Qwen/Qwen3-Embedding-0.6B"
 EMBEDDING_DIMENSION = 1024
 EMBEDDING_MAX_TOKEN_SIZE = 32768
 
-OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
-OPENROUTER_MODEL = "openrouter/free"
-
-
-# ============================================================
-# LOAD ENVIRONMENT
-# ============================================================
-
-load_dotenv(BASE_DIR / ".env")
-
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
-
-if not OPENROUTER_API_KEY:
-    raise ValueError(
-        "OPENROUTER_API_KEY was not found.\n"
-        "Make sure your .env contains:\n\n"
-        "OPENROUTER_API_KEY=your_key_here"
-    )
+from graph.llm_client import (
+    LLM_BASE_URL,
+    LLM_API_KEY,
+    LLM_MODEL,
+    get_openrouter_headers,
+)
 
 
 # ============================================================
@@ -62,13 +50,15 @@ async def llm_model_func(
     if history_messages is None:
         history_messages = []
 
+    headers = get_openrouter_headers(LLM_BASE_URL)
     return await openai_complete_if_cache(
-        model=OPENROUTER_MODEL,
+        model=LLM_MODEL,
         prompt=prompt,
         system_prompt=system_prompt,
         history_messages=history_messages,
-        api_key=OPENROUTER_API_KEY,
-        base_url=OPENROUTER_BASE_URL,
+        api_key=LLM_API_KEY,
+        base_url=LLM_BASE_URL,
+        headers=headers if headers else None,
         **kwargs,
     )
 

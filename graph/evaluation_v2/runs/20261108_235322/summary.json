@@ -1,0 +1,80 @@
+{
+  "run_timestamp": "20261108_235322",
+  "mode": "retrieval_only",
+  "total_cases": 12,
+  "valid_cases": 12,
+  "infra_errors": 0,
+  "pipeline_errors": 0,
+  "latency_p50": 0.044,
+  "latency_p95": 45.928,
+  "overall_metrics": {
+    "aggregation_exact": 0.5,
+    "context_chars": 17010.1667,
+    "context_tokens_est": 4252.25,
+    "field_recall": 0.925,
+    "node_precision": 0.5486,
+    "node_recall": 0.8542
+  },
+  "by_type": {
+    "defect_to_testcase": {
+      "count": 2,
+      "context_chars": 17865.0,
+      "context_tokens_est": 4466.0,
+      "field_recall": 0.8,
+      "node_precision": 0.6,
+      "node_recall": 0.875
+    },
+    "aggregation": {
+      "count": 2,
+      "aggregation_exact": 0.5,
+      "context_chars": 19988.0,
+      "context_tokens_est": 4997.0,
+      "field_recall": 1.0,
+      "node_precision": 1.0,
+      "node_recall": 1.0
+    },
+    "execution_context": {
+      "count": 2,
+      "context_chars": 28279.0,
+      "context_tokens_est": 7069.5,
+      "field_recall": 1.0,
+      "node_precision": 0.5666,
+      "node_recall": 1.0
+    },
+    "unstructured_logs": {
+      "count": 2,
+      "context_chars": 16274.0,
+      "context_tokens_est": 4068.0,
+      "field_recall": 1.0,
+      "node_precision": 0.4,
+      "node_recall": 1.0
+    },
+    "requirements": {
+      "count": 2,
+      "context_chars": 5457.0,
+      "context_tokens_est": 1364.0,
+      "field_recall": 0.75,
+      "node_precision": 0.5,
+      "node_recall": 0.25
+    },
+    "id_lookup": {
+      "count": 2,
+      "context_chars": 14198.0,
+      "context_tokens_est": 3549.0,
+      "field_recall": 1.0,
+      "node_precision": 0.225,
+      "node_recall": 1.0
+    }
+  },
+  "by_split": {
+    "dev": {
+      "count": 12,
+      "aggregation_exact": 0.5,
+      "context_chars": 17010.1667,
+      "context_tokens_est": 4252.25,
+      "field_recall": 0.925,
+      "node_precision": 0.5486,
+      "node_recall": 0.8542
+    }
+  }
+}

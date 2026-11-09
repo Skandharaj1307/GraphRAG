@@ -1,0 +1,21 @@
+{
+  "git_commit": "dc146fccf6342625c2896d106b64bb3100d2a7a7",
+  "mode": "full",
+  "base_url_host": "sees-exclude-airports-posters.trycloudflare.com",
+  "models": {
+    "router": "qwen2.5:14b-instruct-q4_K_M",
+    "answer": "qwen2.5:14b-instruct-q4_K_M",
+    "judge": "qwen2.5:14b-instruct-q4_K_M"
+  },
+  "flags": {
+    "mode": "full",
+    "split": "dev",
+    "smoke": true,
+    "types": null,
+    "limit": null,
+    "resume": null,
+    "repeat": 1,
+    "workers": 1
+  },
+  "seed": 2026
+}

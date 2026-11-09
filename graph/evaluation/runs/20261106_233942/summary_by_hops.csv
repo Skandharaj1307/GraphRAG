@@ -1,0 +1,4 @@
+Hops,Count,Routing Acc %,Retrieval Field Recall %,Answer Correctness %,Pass Rate %
+0,14,78.6%,57.1%,58.9%,35.7%
+1,4,100.0%,100.0%,75.0%,50.0%
+2,3,100.0%,100.0%,66.7%,33.3%

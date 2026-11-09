@@ -6,7 +6,7 @@ import tempfile
 from graph.hybrid_retriever import HybridRetriever
 from graph.context_assembler import ContextAssembler
 from graph.context_to_llm import ContextToLLMFormatter
-from graph.final_llm import FinalLLM
+from graph.final_llm import FinalLLM, sanitize_llm_output
 from graph.grounding_validator import GroundingValidator
 
 
@@ -398,9 +398,11 @@ class FinalAnswerGenerator:
                 "Final LLM returned an empty answer."
             )
 
-        answer = answer.strip()
+        answer = sanitize_llm_output(answer.strip())
 
         print()
+        print("LLM Response: ")
+        print(answer)
         print("✓ Final LLM generated an answer")
 
         # ----------------------------------------------------

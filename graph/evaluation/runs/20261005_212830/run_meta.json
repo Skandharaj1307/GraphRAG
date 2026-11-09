@@ -1,0 +1,9 @@
+{
+  "timestamp": "20261005_212830",
+  "testset_path": "E:\\GraphRAG-1\\graph\\testset.json",
+  "testset_hash": "dce8f0d48472923f714bad672301db55",
+  "judge_mode": "export",
+  "total_cases_evaluated": 5,
+  "limit": 5,
+  "types_filter": null
+}

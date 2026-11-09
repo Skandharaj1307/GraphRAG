@@ -1,0 +1,77 @@
+{
+  "run_timestamp": "20261109_122645",
+  "mode": "router_only",
+  "total_cases": 12,
+  "valid_cases": 12,
+  "infra_errors": 0,
+  "pipeline_errors": 0,
+  "latency_p50": 8.628,
+  "latency_p95": 13.768,
+  "overall_metrics": {
+    "filter_accuracy": 0.9833,
+    "group_by_accuracy": 1.0,
+    "id_precision": 1.0,
+    "id_recall": 1.0,
+    "intent_accuracy": 0.5
+  },
+  "by_type": {
+    "defect_to_testcase": {
+      "count": 2,
+      "filter_accuracy": 1.0,
+      "group_by_accuracy": 1.0,
+      "id_precision": 1.0,
+      "id_recall": 1.0,
+      "intent_accuracy": 0.0
+    },
+    "aggregation": {
+      "count": 2,
+      "filter_accuracy": 1.0,
+      "group_by_accuracy": 1.0,
+      "id_precision": 1.0,
+      "id_recall": 1.0,
+      "intent_accuracy": 1.0
+    },
+    "execution_context": {
+      "count": 2,
+      "filter_accuracy": 1.0,
+      "group_by_accuracy": 1.0,
+      "id_precision": 1.0,
+      "id_recall": 1.0,
+      "intent_accuracy": 0.0
+    },
+    "unstructured_logs": {
+      "count": 2,
+      "filter_accuracy": 1.0,
+      "group_by_accuracy": 1.0,
+      "id_precision": 1.0,
+      "id_recall": 1.0,
+      "intent_accuracy": 0.0
+    },
+    "requirements": {
+      "count": 2,
+      "filter_accuracy": 0.9,
+      "group_by_accuracy": 1.0,
+      "id_precision": 1.0,
+      "id_recall": 1.0,
+      "intent_accuracy": 1.0
+    },
+    "id_lookup": {
+      "count": 2,
+      "filter_accuracy": 1.0,
+      "group_by_accuracy": 1.0,
+      "id_precision": 1.0,
+      "id_recall": 1.0,
+      "intent_accuracy": 1.0
+    }
+  },
+  "by_split": {
+    "dev": {
+      "count": 12,
+      "filter_accuracy": 0.9833,
+      "group_by_accuracy": 1.0,
+      "id_precision": 1.0,
+      "id_recall": 1.0,
+      "intent_accuracy": 0.5
+    }
+  }
+}

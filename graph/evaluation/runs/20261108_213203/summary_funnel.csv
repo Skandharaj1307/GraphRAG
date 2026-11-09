@@ -1,0 +1,7 @@
+Stage,Failed First Count
+extraction,1
+routing,1
+retrieval,3
+generation,3
+infra_error,5
+none (All Passed),14

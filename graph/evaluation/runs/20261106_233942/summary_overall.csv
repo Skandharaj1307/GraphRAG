@@ -1,0 +1,16 @@
+Metric,Value
+Total Test Cases,27
+Valid Pipeline Cases Evaluated,21
+Infrastructure Failures Excluded,6
+Extraction Exact Match,100.0%
+Intent Accuracy (Raw Strict),76.2%
+Intent Accuracy (Aliased),76.2%
+Routing Accuracy,85.7%
+Retrieval Field Recall,71.4%
+Empty Retrieval Rate,0.0%
+Answer Correctness,63.1%
+Unanswerable Pass Rate,0.0%
+Faithfulness (Judge),N/A
+Completeness (Judge),N/A
+Latency p50,62.24s
+Latency p95,132.41s
